@@ -1,27 +1,151 @@
 aid: urbit
 name: Urbit
-description: 'Urbit is a company surfaced as a portfolio company of pantera-capital and added to the API
-  Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Urbit is an open-source personal server platform combining Urbit ID — a
+  self-sovereign, Ethereum-anchored identity system (Azimuth) — with Urbit OS,
+  a deterministic operating system built on the Nock virtual machine and the
+  Hoon language. Every user runs their own ship, a self-hosted server whose
+  Eyre HTTP vane exposes the platform's API surface: cookie-authenticated
+  channels (JSON actions in, Server-Sent Events out), read-only scries, and
+  threads, with first-party JavaScript clients published under the @urbit npm
+  scope. The project is notably agent-native: urbit.org publishes a canonical
+  llms.txt, machine-oriented markdown mirrors, public Agent Skills, and a
+  documented MCP path for driving ships from LLM clients. Originally
+  bootstrapped by Tlon and backed by investors including Pantera Capital, the
+  network's identity layer trades as ERC-721 NFTs with a Layer 2 naive rollup
+  (roller.urbit.org) that eliminates gas costs.
 url: https://raw.githubusercontent.com/api-evangelist/urbit/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - pantera-capital
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-from-portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://s3.us-east-1.amazonaws.com/urbit.orgcontent/Social+Cards/Urbit+Home_Social+Card.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Crypto
-apis: []
+- Personal Servers
+- Decentralized Identity
+- Peer-to-Peer
+- Operating Systems
+- Self-Hosting
+- Agents
+apis:
+- name: Urbit Ship HTTP API (Eyre)
+  description: >-
+    The HTTP interface of every Urbit ship, served by the Eyre kernel vane.
+    Clients authenticate by POSTing the ship's web login code to /~/login for
+    an urbauth session cookie, then interact through channels (PUT JSON
+    action arrays — poke, subscribe, ack, unsubscribe, delete — to
+    /~/channel/{uid}, with responses as Server-Sent Events), read-only scries
+    (GET /~/scry/{app}{path}.{mark}), and Spider threads. Self-hosted: every
+    ship serves its own endpoint; there is no central production host.
+  humanURL: https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref
+  baseURL: https://{ship-host}
+  tags:
+  - HTTP
+  - Server-Sent Events
+  - Channels
+  - Self-Hosted
+  properties:
+  - type: Documentation
+    url: https://docs.urbit.org/urbit-os/kernel/eyre
+  - type: APIReference
+    url: https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref
+- name: Azimuth Layer 2 Roller HTTP RPC-API
+  description: >-
+    The HTTP RPC-API of Azimuth's Layer 2 naive rollup roller, primarily
+    intended for interacting with Bridge. Tlon operates the default public
+    roller at roller.urbit.org, which batches Urbit ID transactions (key
+    rotations, transfers, spawns) onto Ethereum without per-user gas costs.
+  humanURL: https://docs.urbit.org/urbit-id/l2/layer2-api
+  baseURL: https://roller.urbit.org
+  tags:
+  - JSON-RPC
+  - Ethereum
+  - Identity
+  - Layer 2
+  properties:
+  - type: Documentation
+    url: https://docs.urbit.org/urbit-id/l2/roller
+  - type: APIReference
+    url: https://docs.urbit.org/urbit-id/l2/layer2-api
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/urbit-domain-security.yml
 - type: Website
   url: https://urbit.org/
+- type: DeveloperPortal
+  url: https://docs.urbit.org/
+- type: Documentation
+  url: https://docs.urbit.org/
+- type: APIReference
+  url: https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref
+- type: GettingStarted
+  url: https://docs.urbit.org/get-on-urbit
+- type: Support
+  url: https://urbit.org/overview/running-urbit/support
+- type: Blog
+  url: https://urbit.org/blog
+- type: GitHubOrganization
+  url: https://github.com/urbit
+- type: TermsOfService
+  url: https://urbit.org/terms-of-service
+- type: PrivacyPolicy
+  url: https://urbit.org/privacy
+- type: LLMsTxt
+  url: llms/urbit-llms.txt
+- type: AgentsMd
+  url: https://urbit.org/agents.md
+- type: WellKnown
+  url: well-known/urbit-well-known.yml
+- type: MCPServer
+  url: mcp/urbit-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Packages
+  url: packages/urbit-packages.yml
+- type: SDKs
+  url: packages/urbit-packages.yml
+- type: Authentication
+  url: authentication/urbit-authentication.yml
+- type: Conventions
+  url: conventions/urbit-conventions.yml
+- type: ErrorCatalog
+  url: errors/urbit-problem-types.yml
+- type: Conformance
+  url: conformance/urbit-conformance.yml
+- type: Lifecycle
+  url: lifecycle/urbit-lifecycle.yml
+- type: ChangeLog
+  url: changelog/urbit-changelog.yml
+- type: Sandbox
+  url: sandbox/urbit-sandbox.yml
+- type: CLI
+  url: cli/urbit-cli.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 21
+  pass: local-v1

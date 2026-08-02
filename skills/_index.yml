@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://urbit.org/.agents/skills/index.md
+description: >-
+  Urbit publishes a first-party public Agent Skill snapshot on urbit.org under
+  /.agents/skills/ — five SKILL.md entrypoints plus machine-readable discovery
+  bundles — advertised from the canonical https://urbit.org/llms.txt and
+  https://urbit.org/agents.md. The five SKILL.md files are saved verbatim here
+  (generated frontmatter included). Nested references/ (Hawk, Obelisk, Urbit
+  MCP, comet onboarding, Kelvin migrations) remain on the live site; the Urbit
+  MCP reference is profiled in mcp/urbit-mcp.yml.
+skills:
+  - file: urbit-urbit-core.md
+    name: Urbit Core
+    source: https://urbit.org/.agents/skills/urbit-core/SKILL.md
+    summary: Route general Urbit tasks into the right public skill area.
+  - file: urbit-running-urbit-os.md
+    name: Running Urbit OS
+    source: https://urbit.org/.agents/skills/running-urbit-os/SKILL.md
+    summary: Install, boot, operate, and troubleshoot Urbit OS; includes comet onboarding and MCP bootstrap references for agents.
+  - file: urbit-using-urbit-id.md
+    name: Using Urbit ID
+    source: https://urbit.org/.agents/skills/using-urbit-id/SKILL.md
+    summary: Understand Urbit ID, ownership, custody, and point management via Bridge and Azimuth.
+  - file: urbit-urbit-development.md
+    name: Urbit Development
+    source: https://urbit.org/.agents/skills/urbit-development/SKILL.md
+    summary: Develop with Hoon, generators, Gall, desks, and Kelvin migrations.
+  - file: urbit-using-urbit-apps.md
+    name: Using Urbit Apps
+    source: https://urbit.org/.agents/skills/using-urbit-apps/SKILL.md
+    summary: Work with public Urbit userspace apps such as Hawk, Obelisk, and Urbit MCP.
+bundles:
+  - id: dev-basic
+    url: https://urbit.org/.agents/skills/bundles/dev-basic.yaml
+  - id: dev-gall
+    url: https://urbit.org/.agents/skills/bundles/dev-gall.yaml
+  - id: dev-nock
+    url: https://urbit.org/.agents/skills/bundles/dev-nock.yaml
+  - id: ops-basic
+    url: https://urbit.org/.agents/skills/bundles/ops-basic.yaml
+  - id: ops-production
+    url: https://urbit.org/.agents/skills/bundles/ops-production.yaml
+  - id: userspace-apps
+    url: https://urbit.org/.agents/skills/bundles/userspace-apps.yaml

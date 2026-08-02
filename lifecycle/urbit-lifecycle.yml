@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbit.org/ + https://github.com/urbit/vere/releases
+description: >-
+  Lifecycle posture for the Urbit platform. Versioning is two-track: the Vere
+  runtime releases as vere-vX.Y; the Arvo kernel uses Kelvin versioning,
+  counting DOWN toward absolute zero (410 -> 409k -> 408k) with the explicit
+  goal of a frozen, permanent kernel at 0K. Breaking kernel changes arrive as
+  Kelvin decrements with published migration workflows (urbit.org's
+  urbit-development skill ships kelvin-migrations references such as 409k to
+  408k). No public status page, SLA, or RFC 8594 Sunset/Deprecation header
+  support was found (probed status.urbit.org: unreachable; roadmap.urbit.org
+  and urbit.org/roadmap: 404). Every desk pins compatible kernel versions in
+  sys.kelvin (e.g. [%zuse 410]).
+versioning:
+  kernel:
+    scheme: kelvin (counts down toward 0K; frozen forever at absolute zero)
+    current: 408k
+    compatibility: desks declare supported kernel versions in sys.kelvin
+    docs: https://docs.urbit.org/build-on-urbit/environment#create-a-new-desk
+  runtime:
+    scheme: vere-vX.Y GitHub releases
+    current: vere-v4.6
+    releases: https://github.com/urbit/vere/releases
+migration:
+  policy: >-
+    Kelvin decrements are the breaking-change vehicle; app developers follow
+    published Kelvin migration workflows (e.g. 409k -> 408k) to move desks
+    across kernel versions.
+  docs: https://urbit.org/.agents/skills/urbit-development/SKILL.md
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No standalone deprecation policy or RFC 8594 header support documented.
+sla: null
+status_page: null
+probes:
+  - url: https://status.urbit.org/
+    status: unreachable
+  - url: https://roadmap.urbit.org/
+    status: 404
+  - url: https://urbit.org/roadmap
+    status: 404

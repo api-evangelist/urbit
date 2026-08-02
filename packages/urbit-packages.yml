@@ -1,0 +1,93 @@
+generated: '2026-07-21'
+method: searched
+source: https://registry.npmjs.org/ (@urbit scope) + docs.urbit.org/build-on-urbit/tools/js-libs
+description: >-
+  First-party Urbit client libraries live under the @urbit scope on npm,
+  published from the urbit GitHub org. The flagship is @urbit/http-api, the
+  JavaScript library for talking to a running ship's Eyre HTTP server
+  (authentication, pokes, subscriptions, scries, threads) — documented at
+  https://docs.urbit.org/build-on-urbit/tools/js-libs/http-api-guide. No
+  first-party PyPI package exists (PyPI "urbit"/"urbit-http-api" are missing);
+  Rust crates (urbit-http-api, urbit-q, urbit-ob) are community-maintained and
+  excluded from official listing. Versions/dates as observed on the npm
+  registry at generation time.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@urbit/http-api"
+    version: 2.3.0
+    url: https://www.npmjs.com/package/@urbit/http-api
+    install: npm install @urbit/http-api
+    repository: https://github.com/urbit/urbit
+    docs: https://docs.urbit.org/build-on-urbit/tools/js-libs/http-api-guide
+    description: Library to interact with an Urbit ship over HTTP (Eyre channels, pokes, subscriptions, scries, threads).
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@urbit/api"
+    version: 2.3.0
+    url: https://www.npmjs.com/package/@urbit/api
+    install: npm install @urbit/api
+    repository: https://github.com/urbit/urbit
+    description: Bindings and types for Urbit's userspace agents.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@urbit/aura"
+    version: 3.0.0
+    url: https://www.npmjs.com/package/@urbit/aura
+    install: npm install @urbit/aura
+    repository: https://github.com/urbit/aura-js
+    description: Hoon literal syntax (aura) parsing and rendering.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@urbit/nockjs"
+    version: 1.6.0
+    url: https://www.npmjs.com/package/@urbit/nockjs
+    install: npm install @urbit/nockjs
+    repository: https://github.com/urbit/nockjs
+    description: JavaScript Urbit (Nock) runtime.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@urbit/sigil-js"
+    version: 2.2.0
+    url: https://www.npmjs.com/package/@urbit/sigil-js
+    install: npm install @urbit/sigil-js
+    repository: https://github.com/urbit/sigil-js
+    description: Generate Urbit identity sigils as SVG.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@urbit/create-landscape-app"
+    version: 8.2.0
+    url: https://www.npmjs.com/package/@urbit/create-landscape-app
+    install: npm create @urbit/landscape-app
+    repository: https://github.com/urbit/create-landscape-app
+    description: Scaffold a Landscape (Urbit web app) front-end wired to @urbit/http-api.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@urbit/vite-plugin-urbit"
+    version: 1.1.0
+    url: https://www.npmjs.com/package/@urbit/vite-plugin-urbit
+    install: npm install @urbit/vite-plugin-urbit
+    description: Vite plugin for developing Urbit web apps against a running ship.
+    official: true
+community:
+  - language: rust
+    registry: crates.io
+    name: urbit-http-api
+    version: 0.7.3
+    url: https://crates.io/crates/urbit-http-api
+    repository: https://github.com/robkorn/rust-urbit-http-api
+    description: Community Rust wrapper for the Urbit ship HTTP API.
+    official: false
+  - language: rust
+    registry: crates.io
+    name: urbit-q
+    version: 0.3.2
+    url: https://crates.io/crates/urbit-q
+    description: Encode and decode data in Urbit's @q format.
+    official: false

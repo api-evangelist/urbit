@@ -1,0 +1,78 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://urbit.org/.agents/skills/using-urbit-apps/references/urbit-mcp/README.md
+description: >-
+  Urbit MCP (%mcp) is a general-purpose Model Context Protocol interface for
+  Urbit, documented in urbit.org's first-party public agent-skill snapshot
+  (/.agents/skills/using-urbit-apps/references/urbit-mcp/). It is a userspace
+  desk from gwbtc/urbit-mcp — community-built, surfaced and documented by
+  urbit.org itself — that exposes a running ship's capabilities as MCP tools,
+  prompts, and resources over HTTP at the ship's /mcp endpoint. Because every
+  Urbit ship is a self-hosted personal server, there is no central hosted MCP
+  URL: each ship serves its own endpoint, authenticated with the ship's web
+  login cookie (urbauth-~ship) obtained via +code and POST /~/login. The
+  running-urbit-os skill additionally documents an MCP-bootstrap flow for
+  disposable ships that expose an MCP endpoint for agent tooling. Tool list
+  captured verbatim from the published reference.
+server:
+  name: urbit-mcp
+  desk: "%mcp"
+  transport: http
+  endpoint: "http://<ship-host>:<port>/mcp"
+  hosted: self-hosted        # every ship serves its own /mcp; no central URL
+  auth: ship web login cookie (urbauth-~ship) via POST /~/login
+  source: https://github.com/gwbtc/urbit-mcp
+  maintainer: gwbtc (community; documented in urbit.org's official skill snapshot)
+tools:
+  - name: build-file
+    description: Desk and file operations - build a file
+  - name: commit-desk
+    description: Desk and file operations - commit a desk
+  - name: get-file
+    description: Desk and file operations - get a file
+  - name: insert-file
+    description: Desk and file operations - insert a file
+  - name: list-files
+    description: Desk and file operations - list files
+  - name: mount-desk
+    description: Desk and file operations - mount a desk
+  - name: new-desk
+    description: Desk and file operations - create a new desk
+  - name: run-tests
+    description: Desk and file operations - run tests
+  - name: install-app
+    description: Desk and file operations - install an app
+  - name: get-our-id
+    description: Ship and agent operations - get the ship's identity
+  - name: poke-our-agent
+    description: Ship and agent operations - poke an agent
+  - name: nuke-agent
+    description: Ship and agent operations - nuke an agent
+  - name: revive-agent
+    description: Ship and agent operations - revive an agent
+  - name: scry
+    description: Ship and agent operations - scry (read namespace)
+  - name: toggle-permissions
+    description: Ship and agent operations - toggle permissions
+  - name: add-mcp-feature
+    description: MCP self-extension - add an MCP feature
+  - name: add-mcp-prompt
+    description: MCP self-extension - add an MCP prompt
+  - name: add-mcp-resource
+    description: MCP self-extension - add an MCP resource
+  - name: add-mcp-tool
+    description: MCP self-extension - add an MCP tool
+prompts:
+  note: Built-in prompts live under desk/fil/default/mcp/prompts/ and are exposed to MCP clients as slash commands (/mcp__<server-name>__<tool-name>).
+resources:
+  note: Built-in resources live under desk/fil/default/mcp/resources/ and can be pulled into context via @ mentions; resources may point at public https:// URLs or beam:// Clay paths.
+clients:
+  - client: Claude Code
+    register: 'claude mcp add --transport http <name> http://localhost:80/mcp --header "Cookie: urbauth-~your-ship=<token>" --scope user'
+  - client: Codex
+    register: 'uvx mcp-proxy --transport streamablehttp --headers Cookie "urbauth-~your-ship=<token>" http://localhost:80/mcp'
+references:
+  - https://urbit.org/.agents/skills/using-urbit-apps/references/urbit-mcp/README.md
+  - https://urbit.org/.agents/skills/running-urbit-os/references/mcp-bootstrap.md
+  - https://urbit.org/.agents/skills/bundles/userspace-apps.yaml

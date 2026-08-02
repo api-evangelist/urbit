@@ -1,0 +1,47 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbit.org/build-on-urbit/environment.md
+description: >-
+  Urbit's test/sandbox story is the "fake ship": a local development ship
+  booted with an Urbit ID you don't own, running entirely off-network with
+  fake keys. Fake ships never touch the live network; multiple fake ships on
+  one machine network with each other. Disposable comets (free live-net IDs)
+  and local-only comets (-L) are the intermediate tier. Published values are
+  captured verbatim from docs.urbit.org and the urbit.org running-urbit-os
+  agent skill.
+modes:
+  - mode: fake ship
+    live: false
+    command: "./urbit -F zod"
+    identity: any valid Urbit ID you don't own (canonical example ~zod; ~bus for a second ship)
+    isolation: >-
+      Fake ships run on their own network using fake keys and do not
+      communicate with live-net ships in any way. Fake ships on the same
+      machine automatically talk to one another (test with |hi ~bus).
+    docs: https://docs.urbit.org/build-on-urbit/environment#creating-a-fake-ship
+  - mode: local-only comet
+    live: false
+    command: "./urbit -t -L -B <pill> -p <ames-port> --http-port <http-port> -c <pier>"
+    notes: -L keeps networking local; documented in the urbit.org MCP-bootstrap agent reference for disposable ships.
+    docs: https://urbit.org/.agents/skills/running-urbit-os/references/mcp-bootstrap.md
+  - mode: comet
+    live: true
+    cost: free
+    notes: >-
+      Disposable live-net identity; can do almost everything a planet can but
+      some groups refuse comets to prevent spam. Automated comet onboarding
+      for agents is documented in the running-urbit-os skill.
+    docs: https://docs.urbit.org/get-on-urbit
+fixtures:
+  - name: backup pier
+    pattern: >-
+      Boot a fresh fake ship once (./urbit -F zod -c zod.new), mount desks,
+      shut down, keep zod.new as a golden copy; recreate a clean test ship in
+      seconds with rm -r zod && cp -r zod.new zod && ./urbit zod.
+    docs: https://docs.urbit.org/build-on-urbit/environment#faster-fake-ship-booting
+test_identities:
+  - "~zod (canonical fake galaxy for development)"
+  - "~bus (second fake ship for network testing)"
+notes:
+  - No hosted sandbox environment exists; the sandbox is always a local ship.
+  - The dev web login code for a fake ship is obtained the same way as live (+code in the dojo).

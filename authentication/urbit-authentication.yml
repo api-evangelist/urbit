@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref.md
+docs: https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref#authentication
+description: >-
+  Authentication profile for the Urbit ship HTTP API (Eyre, the Arvo HTTP
+  server vane). There is no central Urbit API and no OAuth: every ship is a
+  self-hosted personal server that authenticates web clients with a session
+  cookie. The client obtains the ship's web login code with +code in the dojo,
+  POSTs it to /~/login, and receives an urbauth-~ship session cookie
+  (observed Max-Age 604800 = 7 days) that must accompany all channel, scry,
+  and thread requests. EAuth extends this with cross-ship web login (using
+  one's own ship as the identity provider on another ship's site). The
+  Azimuth PKI on Ethereum anchors identity keys; Bridge (bridge.urbit.org)
+  manages them.
+summary:
+  types: [cookie-session]
+  central_authority: none (per-ship, self-hosted)
+  oauth2_flows: []
+  api_key_in: []
+schemes:
+  - name: eyre-session-cookie
+    type: cookie
+    description: >-
+      POST password=<web-login-code> (from +code in the dojo) to /~/login;
+      Eyre responds with set-cookie: urbauth-~<ship>=<token>; Path=/;
+      Max-Age=604800. Include the cookie header on all subsequent requests.
+      Invalid or missing cookies get 403 Forbidden.
+    login_path: /~/login
+    cookie_name: "urbauth-~<ship>"
+    credential_source: +code (dojo web login code)
+    docs: https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref#authentication
+  - name: eauth
+    type: cross-ship-sso
+    description: >-
+      EAuth: Eyre's cross-ship authentication lets a user log into another
+      ship's web interface using their own ship as identity provider.
+    docs: https://docs.urbit.org/urbit-os/kernel/eyre/eauth
+identity_layer:
+  name: Azimuth (Urbit ID)
+  description: >-
+    Ethereum-anchored PKI: galaxies, stars, planets, moons, comets. Networking
+    keys are set on-chain (L1) or via the Layer 2 naive rollup; Bridge is the
+    key-management client.
+  bridge: https://bridge.urbit.org/
+  docs: https://docs.urbit.org/urbit-id

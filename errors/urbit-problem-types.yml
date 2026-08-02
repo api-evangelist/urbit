@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref.md
+format: eyre (not rfc9457; no application/problem+json)
+description: >-
+  Error catalog for the Urbit ship HTTP API (Eyre), captured from the Eyre
+  External API reference. Errors surface at two levels: HTTP status codes on
+  the login/channel/scry endpoints, and negative acknowledgement objects
+  (err key with message/traceback) delivered as SSE events on channels.
+problems:
+  - status: 403
+    title: Forbidden
+    detail: Session cookie is invalid or missing (login via POST /~/login with the +code web login code).
+    surface: any authenticated endpoint (channels, scries, threads)
+  - status: 404
+    title: Missing
+    detail: The scry endpoint cannot be found (unknown app or path).
+    surface: GET /~/scry/{app}{path}.{mark}
+  - status: 500
+    title: Internal Server Error
+    detail: The requested mark conversions cannot be done (endpoint mark -> requested mark -> MIME).
+    surface: GET /~/scry/{app}{path}.{mark}
+channel_errors:
+  - kind: negative poke ack
+    shape: '{"err": "<error message and traceback>", "id": <request id>, "response": "poke"}'
+    meaning: The poke failed; err contains message and/or traceback. The event must still be acked.
+  - kind: negative watch ack
+    shape: '{"err": "<error message and traceback>", "id": <request id>, "response": "subscribe"}'
+    meaning: The subscription failed. The event must still be acked.
+  - kind: quit
+    shape: '{"id": <subscribe request id>, "response": "quit"}'
+    meaning: >-
+      Subscription ended — either an intentional kick by the Gall agent or a
+      network condition. Resubscribe; a negative watch-ack on retry means the
+      kick was intentional.
+  - kind: clogged subscription
+    meaning: >-
+      Facts left unacked long enough cause Eyre to consider the subscription
+      clogged and automatically unsubscribe the client.
+notes:
+  - Eyre makes a best effort to convert agent facts to JSON; when it cannot, it crashes the subscription and no diff is delivered.
+  - Successful channel PUTs return 204 with no body; all substantive responses arrive as SSE events.

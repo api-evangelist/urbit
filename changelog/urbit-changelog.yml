@@ -1,0 +1,62 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/urbit/vere/releases + https://github.com/urbit/urbit/releases
+description: >-
+  Urbit publishes dated releases on GitHub across two tracks. The runtime
+  (Vere) uses conventional semver-style tags (vere-vX.Y) on urbit/vere; the
+  kernel (Arvo/Hoon) uses Kelvin versioning on urbit/urbit — versions count
+  DOWN toward absolute zero (currently 408k, decremented from 409k), with
+  release-candidate and patch suffixes (408k-rc1, 408k-1). Recent window
+  captured from the GitHub releases API at generation time.
+scheme:
+  runtime: semver-ish vere-vX.Y tags on urbit/vere
+  kernel: Kelvin versioning (counts down; e.g. [%zuse 410] -> 409k -> 408k) on urbit/urbit
+current:
+  runtime: vere-v4.6
+  kernel: 408k-1
+entries:
+  - version: 408k-1
+    date: '2026-07-15'
+    track: kernel
+    url: https://github.com/urbit/urbit/releases/tag/408k-1
+  - version: 408k
+    date: '2026-07-13'
+    track: kernel
+    notes: Kelvin decrement from 409k; migration workflow published in urbit.org's urbit-development agent skill (kelvin-migrations references).
+    url: https://github.com/urbit/urbit/releases/tag/408k
+  - version: vere-v4.6
+    date: '2026-07-03'
+    track: runtime
+    url: https://github.com/urbit/vere/releases/tag/vere-v4.6
+  - version: vere-v4.5
+    date: '2026-06-19'
+    track: runtime
+    url: https://github.com/urbit/vere/releases/tag/vere-v4.5
+  - version: vere-v4.4
+    date: '2026-06-16'
+    track: runtime
+    url: https://github.com/urbit/vere/releases/tag/vere-v4.4
+  - version: 408k-rc2
+    date: '2026-06-12'
+    track: kernel
+    url: https://github.com/urbit/urbit/releases/tag/408k-rc2
+  - version: 408k-rc1
+    date: '2026-04-28'
+    track: kernel
+    url: https://github.com/urbit/urbit/releases/tag/408k-rc1
+  - version: 409k-2
+    date: '2026-03-02'
+    track: kernel
+    url: https://github.com/urbit/urbit/releases/tag/409k-2
+  - version: vere-v4.3
+    date: '2026-02-18'
+    track: runtime
+    url: https://github.com/urbit/vere/releases/tag/vere-v4.3
+  - version: vere-v4.2
+    date: '2026-01-22'
+    track: runtime
+    url: https://github.com/urbit/vere/releases/tag/vere-v4.2
+  - version: vere-v4.1
+    date: '2026-01-20'
+    track: runtime
+    url: https://github.com/urbit/vere/releases/tag/vere-v4.1

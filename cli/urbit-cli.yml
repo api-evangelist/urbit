@@ -1,0 +1,61 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbit.org/get-on-urbit.md
+description: >-
+  Urbit's first-party CLI is the urbit runtime binary itself (Vere), which
+  boots and runs ships, plus the in-ship dojo command line. Pre-built
+  binaries are published per platform behind https://urbit.org/install/...
+  redirects (backed by GitHub urbit/vere releases). Flags and dojo commands
+  captured verbatim from docs.urbit.org and urbit.org's published agent
+  skills.
+binary: urbit
+install:
+  - platform: macos-aarch64
+    command: "curl -L https://urbit.org/install/macos-aarch64/latest | tar xzk -s '/.*/urbit/'"
+  - platform: macos-x86_64
+    command: "curl -L https://urbit.org/install/macos-x86_64/latest | tar xzk -s '/.*/urbit/'"
+  - platform: linux-x86_64
+    command: "curl -L https://urbit.org/install/linux-x86_64/latest | tar xzk --transform='s/.*/urbit/g'"
+  - platform: linux-aarch64
+    command: "curl -L https://urbit.org/install/linux-aarch64/latest | tar xzk --transform='s/.*/urbit/g'"
+flags:
+  - flag: -w <ship> -k <keyfile>
+    purpose: Boot a new ship with an Urbit ID and its networking keyfile.
+  - flag: -F <ship>
+    purpose: Boot a fake (off-network) development ship, e.g. -F zod.
+  - flag: -c <pier>
+    purpose: Create the pier (ship state directory) at the given path.
+  - flag: -B <pill>
+    purpose: Boot from a specific pill (kernel bootstrap).
+  - flag: -p <port>
+    purpose: Set the Ames UDP port.
+  - flag: --http-port <port>
+    purpose: Set the HTTP port Eyre serves on.
+  - flag: -L
+    purpose: Local-only networking (no live net).
+  - flag: -t
+    purpose: Non-interactive / no terminal assumptions (used in automated boots).
+dojo_commands:
+  - command: "+code"
+    purpose: Print the web login code used to authenticate with Eyre (POST /~/login).
+  - command: "|mount %desk / |unmount %desk"
+    purpose: Mount or unmount a desk to the Unix filesystem.
+  - command: "|new-desk %desk"
+    purpose: Create a new desk (populates sys.kelvin with the current kernel version).
+  - command: "|commit %desk"
+    purpose: Commit filesystem changes into a desk.
+  - command: "|install <ship> %desk"
+    purpose: Install an app/desk, e.g. |install ~dister-migrev-dolseg %hawk.
+  - command: "|hi ~ship"
+    purpose: Ping another ship to verify networking.
+key_flows:
+  - flow: boot a planet
+    steps: "screen -S urbit; ./urbit -w sampel-palnet -k /path/to/sampel-palnet-1.key"
+  - flow: boot a development fake ship
+    steps: "./urbit -F zod"
+  - flow: authenticate a web/API client
+    steps: "+code in dojo, then POST password=<code> to /~/login and reuse the urbauth cookie"
+docs:
+  - https://docs.urbit.org/get-on-urbit
+  - https://urbit.org/overview/running-urbit/common-commands
+  - https://docs.urbit.org/build-on-urbit/environment

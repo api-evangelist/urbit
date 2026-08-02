@@ -1,0 +1,51 @@
+generated: '2026-07-21'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface on Urbit's public
+  hosts (urbit.org website, docs.urbit.org documentation, network.urbit.org
+  explorer, roller.urbit.org L2 roller). Status is the HTTP code observed at
+  fetch time. urbit.org publishes a real /.well-known/llms.txt — a documented
+  compatibility mirror of the canonical https://urbit.org/llms.txt agent
+  entrypoint (saved verbatim in llms/urbit-llms.txt). network.urbit.org and
+  roller.urbit.org answer 200 with a text/html SPA shell for every
+  /.well-known/ path, so those are recorded as present-but-not-a-real-document
+  and not saved.
+hosts:
+  - host: https://urbit.org
+    documents:
+      - path: /.well-known/llms.txt
+        status: 200
+        type: text/plain
+        note: documented mirror of https://urbit.org/llms.txt (see llms/urbit-llms.txt)
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://docs.urbit.org
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+  - host: https://network.urbit.org
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        type: text/html
+        note: SPA catch-all shell, not a real security.txt — not saved
+  - host: https://roller.urbit.org
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        type: text/html
+        note: SPA catch-all shell, not a real security.txt — not saved
+  - host: https://bridge.urbit.org
+    documents:
+      - path: /.well-known/security.txt
+        status: 403

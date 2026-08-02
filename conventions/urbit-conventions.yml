@@ -1,0 +1,65 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref.md
+description: >-
+  Cross-cutting request/response semantics of the Urbit ship HTTP API (Eyre).
+  Interaction is a channel protocol rather than resource-oriented REST: an
+  authenticated client PUTs JSON action arrays to /~/channel/{uid} and
+  receives responses as Server-Sent Events on a GET of the same URL. Reads
+  are scries (GET /~/scry/{app}{path}.{mark}); long-running jobs are threads
+  run via Spider (POST /spider/...). There is no documented idempotency-key
+  contract, no pagination convention, and no rate-limit signaling — the
+  server is the user's own ship.
+authentication:
+  style: session cookie (urbauth-~<ship>) via POST /~/login
+  see: authentication/urbit-authentication.yml
+channels:
+  url: "/~/channel/{uid}"
+  request: PUT with Content-Type + Cookie headers; body is a JSON array of action objects
+  actions: [poke, subscribe, ack, unsubscribe, delete]
+  success_status: 204 (no content; responses arrive as SSE on the channel stream)
+  event_stream: GET the channel URL with a valid session cookie; events are SSE with incrementing ids
+  ack_contract: >-
+    Every SSE event must be acked (action ack with event-id). Acking one event
+    implicitly acks all previous events. Unacked facts long enough mark the
+    subscription clogged and Eyre automatically unsubscribes the client.
+  reconnect: on a quit response, resubscribe; a negative watch-ack then means the kick was intentional
+reads:
+  style: scry
+  url: "http{s}://{host}/~/scry/{app}{path}.{mark}"
+  notes: >-
+    Read-only; Eyre scries with care %x. The {mark} return type is negotiable
+    (any mark convertible from the endpoint's mark and to a MIME mark).
+threads:
+  style: Spider HTTP API
+  docs: https://docs.urbit.org/urbit-os/base/threads/http-api
+error_envelope:
+  channel_level: >-
+    Negative acknowledgements: poke ack / watch ack objects carry an err key
+    with an error message and/or traceback in place of ok.
+  http_level: >-
+    403 Forbidden for invalid/missing session cookie; 404 Missing for unknown
+    scry endpoints; 500 Internal Server Error for impossible mark conversions;
+    200/204 on success.
+  see: errors/urbit-problem-types.yml
+idempotency:
+  supported: false
+  notes: No idempotency-key header or replay contract is documented for Eyre.
+pagination:
+  style: none
+  notes: No cross-cutting pagination convention; agents define their own scry paths.
+versioning:
+  style: kelvin
+  notes: >-
+    Kernel (Arvo/Hoon/Nock) versions count down toward absolute zero (Kelvin
+    versioning); desks/agents migrate across Kelvin decrements. See
+    lifecycle/urbit-lifecycle.yml.
+rate_limits:
+  signaling: none documented (self-hosted single-tenant server)
+request_tracing:
+  header: none documented; channel messages carry client-chosen numeric id fields for correlation
+agent_queries:
+  style: GitBook ask parameter
+  notes: >-
+    Every docs.urbit.org page answers dynamic agent queries via
+    GET <page-url>.md?ask=<question>&goal=<endgoal>.

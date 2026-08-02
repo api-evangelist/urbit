@@ -1,0 +1,362 @@
+# Urbit Docs
+
+## Urbit Docs
+
+- [What is Urbit?](https://docs.urbit.org/readme.md): Urbit docs site. Urbit ID, Urbit OS, Hoon, Nock, and self-hosting.
+- [Get on Urbit](https://docs.urbit.org/get-on-urbit.md): Step-by-step guide to getting started with Urbit, including obtaining an Urbit ID, downloading they keyfile, installing the runtime, and booting your first Urbit OS server.
+- [Style Guide](https://docs.urbit.org/style.md): Urbit docs style guide.
+- [Contents](https://docs.urbit.org/build-on-urbit/contents.md): Overview of development resources for building on Urbit, including courses for learning Hoon, app development guides, core development, runtime development, and tools for Urbit developers.
+- [Environment Setup](https://docs.urbit.org/build-on-urbit/environment.md): Developer environment setup guide for Urbit development, including text editor configuration, development ship setup, and project organization best practices.
+- [Hoon School](https://docs.urbit.org/build-on-urbit/hoon-school.md): Beginner's course for learning Hoon, Urbit's functional programming language, with explanations, exercises, and tutorials for developers at all levels.
+- [1. Hoon Syntax](https://docs.urbit.org/build-on-urbit/hoon-school/b-syntax.md): Introduction to Hoon programming language syntax, covering basic elements like nouns (atoms and cells), runes (operators), auras (atom types), and fundamental control flow structures.
+- [2. Azimuth (Urbit ID)](https://docs.urbit.org/build-on-urbit/hoon-school/c-azimuth.md): Overview of Urbit ID (Azimuth) hierarchical address space, including galaxy, star, planet, moon, and comet identity types, their naming conventions, and sponsor relationships.
+- [3. Gates (Functions)](https://docs.urbit.org/build-on-urbit/hoon-school/d-gates.md): Learn to create and use gates (functions) in Hoon, including deferred computations, type specification, file organization, generators, and irregular syntactic sugar forms.
+- [4. Molds (Types)](https://docs.urbit.org/build-on-urbit/hoon-school/e-types.md): Guide to Hoon's type system, covering atoms with auras, molds for data structures, type-checking and type inference, core variance, nesting relationships, and type safety.
+- [5. Cores](https://docs.urbit.org/build-on-urbit/hoon-school/f-cores.md): Introduction to cores, Hoon's fundamental data structure that separates computation from data. Covers traps for recursion, core creation with arms and samples.
+- [6. Trees and Addressing](https://docs.urbit.org/build-on-urbit/hoon-school/g-trees.md): Understanding Urbit's binary tree data representation, tree addressing systems, data location and evaluation, the \`+list\` mold, and standard library operations for working with tree-structured data.
+- [7. Libraries](https://docs.urbit.org/build-on-urbit/hoon-school/h-libraries.md): Guide to creating, importing, and using libraries in Hoon programming. Covers library imports with the /+ faslus rune, helper cores, composition runes, and best practices for code organization.
+- [8. Testing Code](https://docs.urbit.org/build-on-urbit/hoon-school/i-testing.md): Testing Hoon code, including unit testing frameworks, fences for runtime assertions, debugging strategies, and best practices for building reliable and maintainable software.
+- [9. Text Processing I](https://docs.urbit.org/build-on-urbit/hoon-school/j-stdlib-text.md): Introduction to text representation in Hoon, covering cords, tapes, knots, terms, text manipulation tools, and %say generators for command-line argument processing.
+- [10. Cores and Doors](https://docs.urbit.org/build-on-urbit/hoon-school/k-doors.md): Advanced core concepts including doors (gate-building gates), doors as parametrized cores with sample data, working with \`+map\`s (key-value stores), and stateful computation patterns.
+- [11. Data Structures](https://docs.urbit.org/build-on-urbit/hoon-school/l-struct.md): Guide to Hoon data structures including trees, sets, jars, and jugs. Covers mold builders, type system handling, compiler type checking, and practical manipulation operations.
+- [12. Type Checking](https://docs.urbit.org/build-on-urbit/hoon-school/m-typecheck.md): Detailed examination of Hoon's type checking system, covering type casting, type inference, compile-time verification, mold application, and debugging nest-fail errors in complex type hierarchies.
+- [13. Conditional Logic](https://docs.urbit.org/build-on-urbit/hoon-school/n-logic.md): Guide to conditional logic in Hoon, covering loobean (boolean) values, logical operators (AND, OR, NOT), conditional branching, switch statements, and pattern matching.
+- [14. Subject-Oriented Programming](https://docs.urbit.org/build-on-urbit/hoon-school/o-subject.md): Guide to subject-oriented programming in Hoon, covering how expressions are evaluated within subjects, core composition, state management, deferred computations, and scrying local data.
+- [15. Text Processing II](https://docs.urbit.org/build-on-urbit/hoon-school/p-stdlib-io.md): Advanced text processing in Hoon, covering text conversions, formatted text with $tanks, %ask generators, I/O operations, and practical tools for web data, JSON, and output formatting.
+- [16. Functional Programming](https://docs.urbit.org/build-on-urbit/hoon-school/q-func.md): Functional programming concepts in Hoon, including gate manipulation, currying and binding samples, changing arity, function composition with cork and corl, and working with lists.
+- [17. Text Processing III](https://docs.urbit.org/build-on-urbit/hoon-school/q2-parsing.md): Guide to text parsing in Hoon, covering parser fundamentals, rule building, parsing techniques with scanning and RegEx-like operations, and building complex parsers.
+- [18. Generic and Variant Cores](https://docs.urbit.org/build-on-urbit/hoon-school/r-metals.md): Advanced core theory. Genericity with wet gates and cores, type polymorphism, dry vs wet core behavior, parametric polymorphism, and compile-time vs. runtime type-checking.
+- [19. Mathematics](https://docs.urbit.org/build-on-urbit/hoon-school/s-math.md): Guide to mathematical operations in Hoon beyond unsigned integers, covering floating-point arithmetic, signed integers, modular arithmetic, bitwise operations, and IEEE 754.
+- [App School I](https://docs.urbit.org/build-on-urbit/app-school.md): Guide to building Gall agents on Urbit.
+- [1. Arvo](https://docs.urbit.org/build-on-urbit/app-school/1-arvo.md): Introduction to Arvo, Urbit's operating system and kernel.
+- [2. The Agent Core](https://docs.urbit.org/build-on-urbit/app-school/2-agent.md): Guide to Gall agent structure and core concepts.
+- [3. Imports and Aliases](https://docs.urbit.org/build-on-urbit/app-school/3-imports-and-aliases.md): Importing libraries, virtual arms, core composition, and boilerplate patterns.
+- [4. Lifecycle](https://docs.urbit.org/build-on-urbit/app-school/4-lifecycle.md): Agent lifecycle management: state initialization, import and export, versioned state types, and upgrade procedures.
+- [5. Cards](https://docs.urbit.org/build-on-urbit/app-school/5-cards.md): Gall agent effects, requests, responses, and subscription management.
+- [6. Pokes](https://docs.urbit.org/build-on-urbit/app-school/6-pokes.md): Handling one-off messages (pokes) in Gall agents.
+- [7. Structures and Marks](https://docs.urbit.org/build-on-urbit/app-school/7-sur-and-marks.md): Type definitions and data conversion for Gall agents.
+- [8. Subscriptions](https://docs.urbit.org/build-on-urbit/app-school/8-subscriptions.md): Gall agent subscription management.
+- [9. Vanes](https://docs.urbit.org/build-on-urbit/app-school/9-vanes.md): Guide to interacting with Arvo vanes (kernel modules) from Gall agents.
+- [10. Scries](https://docs.urbit.org/build-on-urbit/app-school/10-scry.md): Guide to Gall agent scry functionality.
+- [11. Failure](https://docs.urbit.org/build-on-urbit/app-school/11-fail.md): Guide to Gall agent error handling through the +on-fail arm and helper core patterns.
+- [12. Next Steps](https://docs.urbit.org/build-on-urbit/app-school/12-next-steps.md): End of App School I.
+- [Appendix: Types](https://docs.urbit.org/build-on-urbit/app-school/types.md): Explanation of types commonly used in Gall agents. Vase, mark, cage, quip, path, wire.
+- [App School II (Full-Stack)](https://docs.urbit.org/build-on-urbit/app-school-full-stack.md): Walkthrough for building a full-stack Urbit application with a Gall backend and React frontend, demonstrating how to create complete web applications on Urbit.
+- [1. Types](https://docs.urbit.org/build-on-urbit/app-school-full-stack/1-types.md): First step in building a full-stack Urbit app. Defining data structures in /sur files including basic types, action commands, update events, and state organization.
+- [2. Agent](https://docs.urbit.org/build-on-urbit/app-school-full-stack/2-agent.md): Building the Gall agent backend for a full-stack app including imports, state management, poke handling, subscription patterns, and scry endpoints for data retrieval.
+- [3. JSON](https://docs.urbit.org/build-on-urbit/app-school-full-stack/3-json.md): Building JSON conversion libraries for full-stack Urbit apps covering +enjs and +dejs functions for encoding/decoding data, mark conversion workflows, and bridging Gall agents with web frontends.
+- [4. Marks](https://docs.urbit.org/build-on-urbit/app-school-full-stack/4-marks.md): Creating mark files for full-stack Urbit apps. Conversion methods between native types and JSON, defining +grow and +grab arms for custom type conversion logic.
+- [5. Eyre](https://docs.urbit.org/build-on-urbit/app-school-full-stack/5-eyre.md): Using Eyre, the HTTP server vane, in full-stack Urbit development. Covers the channel system for pokes and subscriptions, scry interface for data queries, and authentication mechanisms.
+- [6. React app setup](https://docs.urbit.org/build-on-urbit/app-school-full-stack/6-react-setup.md): Setting up React frontend for full-stack Urbit apps using the npm @urbit/create-landscape-app package, configuring @urbit/http-api for ship communication.
+- [7. React app logic](https://docs.urbit.org/build-on-urbit/app-school-full-stack/7-app-logic.md): React application logic for full-stack Urbit apps covering state management, ship communication patterns, subscription handling, poke operations, and data synchronization.
+- [8. Desk and glob](https://docs.urbit.org/build-on-urbit/app-school-full-stack/8-desk.md): Building and deploying full-stack Urbit apps including desk configuration, kelvin versions, docket file for app metadata, glob creation for frontend assets, and publishing for distribution.
+- [9. Summary](https://docs.urbit.org/build-on-urbit/app-school-full-stack/9-final.md): Summary and conclusion of the full-stack Urbit app tutorial with reference links for all covered topics including types, agents, JSON conversion, marks, Eyre, React frontend, and desk publishing.
+- [Core Academy](https://docs.urbit.org/build-on-urbit/core-academy.md): Course for developers who have finished Hoon School to learn Arvo kernel development, covering each part of Arvo, Zuse, Hoon, and the runtime for core Urbit OS development.
+- [1. Evaluating Nock](https://docs.urbit.org/build-on-urbit/core-academy/ca00.md): Core Academy lesson on Nock evaluation covering all Nock rules 0-12, binary tree addressing, hints and jetting, scry operations, virtualized Nock with +mock, and the Urbit lifecycle function.
+- [2. Building Hoon](https://docs.urbit.org/build-on-urbit/core-academy/ca01.md): Core Academy lesson on the Hoon compiler covering vase-mode programming with +slap/+slop algebra, the compilation pipeline from text to AST to Nock, type system mechanics, and Ford file building.
+- [3. The Core Stack](https://docs.urbit.org/build-on-urbit/core-academy/ca02.md): Core Academy lesson on Urbit's core architecture. Subject-oriented programming, limb resolution mechanics, nested core structures, and the Hoon standard library organization.
+- [4. Arvo I: The Main Sequence](https://docs.urbit.org/build-on-urbit/core-academy/ca03.md): Core Academy lesson on Arvo's event handling architecture covering the main sequence, moves and events, ducts and wires, vane interactions, scry operations, and Arvo's ACID transaction guarantees.
+- [5. Arvo II: The Boot Sequence](https://docs.urbit.org/build-on-urbit/core-academy/ca04.md): Core Academy lesson on Arvo's boot sequence covering pill creation and loading, larval and adult phases, vane initialization, userspace bootstrapping, and the complete boot process.
+- [6. Vere I: u3 and the Serf](https://docs.urbit.org/build-on-urbit/core-academy/ca05.md): Core Academy lesson on Vere runtime architecture covering the u3 noun system, king/serf processes, the Mars/Urth split, event log management, jet dashboard, and the Arvo/Vere interface.
+- [7. Vere II: The Loom](https://docs.urbit.org/build-on-urbit/core-academy/ca06.md): Core Academy lesson on Vere's memory management covering the loom allocator, noun memory layout, reference counting, structural sharing, the road system, metacircularity, paging, and snapshots.
+- [8. Vanes I: Behn, Dill, Kahn, Lick](https://docs.urbit.org/build-on-urbit/core-academy/ca07.md): Core Academy lesson on Arvo vanes covering the Behn timer vane, Dill terminal driver vane, Khan thread runner vane, Lick IPC vane.
+- [9. Vanes II: Ames](https://docs.urbit.org/build-on-urbit/core-academy/ca08.md): Core Academy lesson on Ames covering the encrypted peer-to-peer protocol, its packet structure, message flows, cryptographic operations, integration with Urbit ID, and the Fine remote scry protocol.
+- [10. Vanes III: Eyre, Iris](https://docs.urbit.org/build-on-urbit/core-academy/ca09.md): Core Academy lesson on HTTP vanes covering the Eyre vane's HTTP server functionality, the Iris vane's HTTP client operations, web request/response patterns and authentication mechanisms.
+- [11. Vanes IV: Clay](https://docs.urbit.org/build-on-urbit/core-academy/ca10.md): Description of Clay, Arvo's revision-controlled filesystem vane. Also covers the build system, marks, scry cares, %kiln.
+- [12. Vanes V: Gall and Userspace](https://docs.urbit.org/build-on-urbit/core-academy/ca11.md): Covers Gall, Arvo's userspace application framework vane, the agent type, running agents, and userspace software updates.
+- [13. Vanes VI: Khan, Lick](https://docs.urbit.org/build-on-urbit/core-academy/ca12.md): This lesson covers I/O with Khan, Arvo's thread runner vane, and Lick, Arvo's IPC vane.
+- [14. Vanes VII: Jael, Azimuth](https://docs.urbit.org/build-on-urbit/core-academy/ca13.md): A look at Urbit's networking key infrastructure. Covers the Jael vane, the %eth-watcher agent, and Azimuth's Layer 2 rollup solution.
+- [Runtime](https://docs.urbit.org/build-on-urbit/runtime.md): Documentation for Urbit's runtime and Nock interpreter (Vere), including guides for U3, jetting, C programming in Urbit, and cryptography implementation.
+- [U3](https://docs.urbit.org/build-on-urbit/runtime/u3.md): Introduction to u3, the Nock runtime system. C library for making and storing nouns. Solid-state interpreter.
+- [Conn.c Guide](https://docs.urbit.org/build-on-urbit/runtime/conn.md): Guide for using conn.c driver. Unix domain socket for external ship interaction. Khan vane, urbit eval utility.
+- [How to Write a Jet](https://docs.urbit.org/build-on-urbit/runtime/jetting.md): Complete tutorial on writing jets in Urbit. C implementations of Hoon gates for performance. Developer environment setup.
+- [API Overview by Prefix](https://docs.urbit.org/build-on-urbit/runtime/api.md): API overview by prefix for u3 system modules. Function reference for noun manipulation, jets, allocation, Nock computation.
+- [C in Urbit](https://docs.urbit.org/build-on-urbit/runtime/c.md): C conventions and style used in Urbit. Integer types, variable naming, loobeans. The c3 layer under u3.
+- [Cryptography](https://docs.urbit.org/build-on-urbit/runtime/cryptography.md): Cryptographic primitives used by Arvo. Ed25519 signatures, AES-SIV encryption. All jetted for performance.
+- [Land of Nouns](https://docs.urbit.org/build-on-urbit/runtime/nouns.md): Comprehensive guide to u3 noun processing in C. Memory model, reference counting, road system architecture.
+- [Tools](https://docs.urbit.org/build-on-urbit/tools.md): Developer documentation for additional tools, external libraries, and third-party applications for Urbit development, including JavaScript libraries and documentation tools.
+- [Useful Links](https://docs.urbit.org/build-on-urbit/tools/links.md): Curated collection of external Urbit development resources including app repositories, Hoon libraries, JavaScript packages, documentation sites, and development tools.
+- [JS Libraries](https://docs.urbit.org/build-on-urbit/tools/js-libs.md): JavaScript libraries for Urbit development including @urbit/http-api for communicating with a Gall agent backend from a React web frontend.
+- [HTTP API](https://docs.urbit.org/build-on-urbit/tools/js-libs/http-api-guide.md): Guide to the @urbit/http-api JavaScript library for building web frontends that communicate with Urbit ships, covering authentication, pokes, subscriptions, scries, threads, and practical examples.
+- [Docs App](https://docs.urbit.org/build-on-urbit/tools/docs-app.md): Documentation application for distributing docs with Urbit desks.
+- [File Format](https://docs.urbit.org/build-on-urbit/tools/docs-app/file-format.md): File format specifications for the %docs app including %docu mark requirements, supported formats (udon, txt, html, gmi), syntax rules, and conversion guidelines for documentation publishing.
+- [Index File](https://docs.urbit.org/build-on-urbit/tools/docs-app/index-file.md): Configuration guide for doc.toc index files in the %docs app, covering structure definition, hierarchical organization, file/directory specification, and automatic table of contents generation.
+- [Suggested Structure](https://docs.urbit.org/build-on-urbit/tools/docs-app/structure.md): Best practices for organizing documentation in the %docs app, covering user documentation, developer API references, changelog structure, and data type documentation patterns.
+- [Userspace](https://docs.urbit.org/build-on-urbit/userspace.md): Guides for building and distributing userspace applications on Urbit, including examples, exercises, and tutorials for app development.
+- [Command-Line App Tutorial](https://docs.urbit.org/build-on-urbit/userspace/cli-tutorial.md): Complete tutorial for building CLI applications using /lib/shoe.hoon. Command parsing, session management, the %shoe example app.
+- [Remote Scry](https://docs.urbit.org/build-on-urbit/userspace/remote-scry.md): Remote scrying between ships since kernel v413. Publishing with %grow, encryption options, access control, %keen/%chum/%tune lifecycle.
+- [Unit Tests](https://docs.urbit.org/build-on-urbit/userspace/unit-tests.md): Unit testing framework using -test thread and /lib/test.hoon. Write test arms with +test-\* pattern that return $tang.
+- [Software Distribution](https://docs.urbit.org/build-on-urbit/userspace/dist.md): Urbit supports peer-to-peer distribution and installation of applications. A user can click on a link to an app published on another ship to install.
+- [Software Distribution Guide](https://docs.urbit.org/build-on-urbit/userspace/dist/software-distribution.md): Complete tutorial for creating and publishing Urbit apps. Walk through Hello World example from desk creation to remote installation via Treaty.
+- [Docket File](https://docs.urbit.org/build-on-urbit/userspace/dist/docket.md): Docket file configuration for Landscape apps. Defines tile appearance, glob source, version, and metadata using clauses like %title, %color.
+- [Glob](https://docs.urbit.org/build-on-urbit/userspace/dist/glob.md): Globs contain client-side resources (HTML, JS, CSS) for Landscape apps. Distribution over Ames or HTTP, Globulator tool, make-glob thread.
+- [Examples](https://docs.urbit.org/build-on-urbit/userspace/examples.md): Examples and exercises for building Urbit userspace apps including CLI tools, websites, and games.
+- [Building a CLI App](https://docs.urbit.org/build-on-urbit/userspace/examples/rpn.md): Tutorial on building a reverse Polish notation calculator CLI app using Hoon and the shoe library.
+- [Debugging Wrapper](https://docs.urbit.org/build-on-urbit/userspace/examples/dbug.md): Guide to using the dbug library to debug Gall agents and inspect their state.
+- [Host a Website](https://docs.urbit.org/build-on-urbit/userspace/examples/feature.md): Tutorial on building a simple website hosting app using the Schooner library to serve HTML pages from Urbit.
+- [Serving a JS Game](https://docs.urbit.org/build-on-urbit/userspace/examples/flap.md): Tutorial on connecting a JavaScript Flappy Bird game to an Urbit backend with leaderboard and file serving.
+- [Ship Monitoring](https://docs.urbit.org/build-on-urbit/userspace/examples/ahoy.md): Tutorial on building a ship monitoring app with Sail frontend, CLI generators, and Behn timers for notifications.
+- [Styled Text](https://docs.urbit.org/build-on-urbit/userspace/examples/track7.md): Tutorial on producing styled text with styx strings and outputting them from Urbit agents to the terminal.
+- [What is Urbit ID?](https://docs.urbit.org/urbit-id/what-is-urbit-id.md): Overview of Urbit ID, a decentralized identity standard built on Ethereum. Covers network topology, smart contracts, and Layer 2 rollup functionality.
+- [Azimuth Data Flow](https://docs.urbit.org/urbit-id/flow.md): Technical overview of Azimuth's data flow, including Bridge, Gall agents, the Layer 2 naive rollup solution, and how components in Urbit OS communicate in Urbit's PKI system on Ethereum.
+- [Life and Rift](https://docs.urbit.org/urbit-id/life-and-rift.md): Explanation of life and rift numbers in Azimuth, how they track networking key revisions and breach counts for secure peer-to-peer networking on Urbit.
+- [Urbit HD Wallet](https://docs.urbit.org/urbit-id/hd-wallet.md): Guide to Urbit's Hierarchical Deterministic wallet system. Master tickets, proxy keys, wallet generation, and security best practices for Urbit ID ownership.
+- [Advanced Azimuth Tools](https://docs.urbit.org/urbit-id/advanced-azimuth-tools.md): Advanced techniques for generating, signing, and sending Azimuth transactions from within Urbit using the %claz and %eth-sender agents for Layer 1 operations.
+- [Custom Roller Tutorial](https://docs.urbit.org/urbit-id/roller-tutorial.md): Step-by-step tutorial for setting up your own Layer 2 roller for Urbit ID transactions, including configuration, Bridge setup, and roller management commands.
+- [Azimuth.eth Reference](https://docs.urbit.org/urbit-id/azimuth-eth.md): Technical reference for Azimuth.eth, the data store for Urbit ID ownership, Points, Deeds, networking keys, and sponsorship information on Ethereum.
+- [Ecliptic.eth Reference](https://docs.urbit.org/urbit-id/ecliptic.md): Technical reference for the Ecliptic.eth smart contract, which runs business logic for Urbit ID operations, including all write and read functions for managing Points, proxies, and governance.
+- [Layer 2](https://docs.urbit.org/urbit-id/l2.md): Technical overview of Azimuth's Layer 2 naive rollups scaling solution: transaction batching, state management, sponsorship mechanics, and security measures for reduced-cost Urbit ID operations.
+- [L2 Actions](https://docs.urbit.org/urbit-id/l2/l2-actions.md): Guide to the actions that can be taken by Azimuth's Layer 2 roller.
+- [L2 Rollers](https://docs.urbit.org/urbit-id/l2/roller.md): Overview of Azimuth's Layer 2 naive rollup solution.
+- [L2 Roller HTTP RPC-API](https://docs.urbit.org/urbit-id/l2/layer2-api.md): Guide to Azimuth's Layer 2 roller's HTTP RPC-API.
+- [L2 Transaction Format](https://docs.urbit.org/urbit-id/l2/bytestring.md): Guide to the bytestring format for Azimuth's Layer 2 roller transactions and batches.
+- [What is Urbit OS?](https://docs.urbit.org/urbit-os/what-is-urbit-os.md): Introduction to Urbit OS, a functional, deterministic personal server operating system. Includes documentation for the Arvo kernel, its modules, and the standard distribution in the %base desk.
+- [Base](https://docs.urbit.org/urbit-os/base.md): Documentation for the %base desk, the Urbit OS standard distribution containing the kernel, Arvo, Hoon standard library, system apps like %hood, and affordances for writing threads.
+- [Hood](https://docs.urbit.org/urbit-os/base/hood.md): API reference for %hood, a Gall agent that interfaces with Urbit OS. Includes documentation for its modules Drum (CLI management), Helm (system control), and Kiln (desk updates and filesystem).
+- [Threads](https://docs.urbit.org/urbit-os/base/threads.md): Guide to writing threads, transient monadic functions for complex IO operations, managed by the %spider agent or the Khan vane, with tutorials, examples, and API reference.
+- [Basics Tutorial](https://docs.urbit.org/urbit-os/base/threads/basics.md): Tutorial covering thread fundamentals including strands, monadic composition with form and pure, bind operations, input/output handling, and practical examples for writing threads.
+- [Bind](https://docs.urbit.org/urbit-os/base/threads/basics/bind.md): Guide to monadic bind operations for strand composition using the ;< micgal rune, chaining strands sequentially, error handling, and strandio library functions for complex thread operations.
+- [Fundamentals](https://docs.urbit.org/urbit-os/base/threads/basics/fundamentals.md): Thread fundamentals. Transient agent functionality, strand composition, thread definition, the +form and +pure arms, threads' location in /ted directory, and creating basic threads.
+- [Input](https://docs.urbit.org/urbit-os/base/threads/basics/input.md): Guide to strand input including $bowl structure with ship, timing, and subscription data, input types (pokes, signs, agent communication), and accessing input data within thread execution.
+- [Output](https://docs.urbit.org/urbit-os/base/threads/basics/output.md): Guide to strand output including cards and response codes (%wait, %skip, %cont, %fail, %done), flow control mechanisms, error handling, and completion patterns in thread execution.
+- [Summary](https://docs.urbit.org/urbit-os/base/threads/basics/summary.md): Summary and recap of thread concepts including %spider agent management, strand composition, +form/+pure/+bind operations, input/output patterns, and strandio utility functions.
+- [HTTP API Guide](https://docs.urbit.org/urbit-os/base/threads/http-api.md): Guide to running threads via HTTP API - URL structure, mark conversion, JSON handling, and authenticated requests through Eyre.
+- [Spider API Reference](https://docs.urbit.org/urbit-os/base/threads/api.md): Spider API reference for starting, stopping, and interacting with threads. Pokes, subscriptions, and thread lifecycle management.
+- [Strandio Reference](https://docs.urbit.org/urbit-os/base/threads/strandio.md): Reference for Strandio library functions - HTTP requests, pokes, subscriptions, scries, timers, and more for thread programming.
+- [Examples](https://docs.urbit.org/urbit-os/base/threads/examples.md): Collection of practical thread examples including Gall agent integration, JSON fetching, child thread management, main-loop patterns, agent communication, scrying, and fact handling.
+- [Child Thread](https://docs.urbit.org/urbit-os/base/threads/examples/child-thread.md): Thread examples showing how parent threads can start/stop child threads, and get their results.
+- [Fetch JSON](https://docs.urbit.org/urbit-os/base/threads/examples/get-json.md): Practical example of fetching and parsing JSON data in threads using strandio's +fetch-json function, demonstrated with a Bitcoin price fetcher that queries external APIs and processes responses.
+- [Gall](https://docs.urbit.org/urbit-os/base/threads/examples/gall.md): Examples of Gall agent integration with threads covering thread lifecycle management, starting threads, handling results, subscription patterns, cancellation, and inter-thread communication.
+- [Poke Thread](https://docs.urbit.org/urbit-os/base/threads/examples/gall/poke-thread.md): Gall agent example demonstrating how to poke running threads.
+- [Start Thread](https://docs.urbit.org/urbit-os/base/threads/examples/gall/start-thread.md): Gall agent examples for starting threads - inline vs file threads, Khan vs Spider APIs, thread IDs and subscription patterns.
+- [Stop Thread](https://docs.urbit.org/urbit-os/base/threads/examples/gall/stop-thread.md): Gall agent example demonstrating how to stop running threads - Spider-stop pokes and thread lifecycle management.
+- [Take Facts](https://docs.urbit.org/urbit-os/base/threads/examples/gall/take-facts.md): Gall agent example for receiving facts from running threads - subscription patterns and fact handling while threads execute.
+- [Take Result](https://docs.urbit.org/urbit-os/base/threads/examples/gall/take-result.md): Gall agent examples showing how to handle thread results - success/failure cases for Khan and Spider thread execution.
+- [Main-loop](https://docs.urbit.org/urbit-os/base/threads/examples/main-loop.md): Advanced thread examples using main-loop for continuous processing, multiple function patterns, and subscription handling.
+- [Poke Agent](https://docs.urbit.org/urbit-os/base/threads/examples/poke-agent.md): Example thread demonstrating how to poke agents - sending a |hi command to a ship via the hood agent.
+- [Scry](https://docs.urbit.org/urbit-os/base/threads/examples/scry.md): Thread example showing how to scry ames for ship IP addresses and ports - practical scrying with formatted output.
+- [Take Fact](https://docs.urbit.org/urbit-os/base/threads/examples/take-fact.md): Thread example demonstrating subscription and fact handling - watching agents, taking facts, and processing subscription data.
+- [Kernel](https://docs.urbit.org/urbit-os/kernel.md): API documentation and guides for the Urbit OS kernel and its modules Ames, Behn, Clay, Dill, Eyre, Gall, Iris, Jael, Khan, and Lick.
+- [Arvo](https://docs.urbit.org/urbit-os/kernel/arvo.md): High-level technical introduction to Arvo, Urbit's functional operating system. Covers event handling, deterministic execution, and ACID database properties.
+- [Cryptography](https://docs.urbit.org/urbit-os/kernel/arvo/cryptography.md): Arvo cryptography overview - Azimuth keys, networking keys, and cryptographic components across the system.
+- [Move Trace](https://docs.urbit.org/urbit-os/kernel/arvo/move-trace.md): Arvo move trace tutorial - debugging kernel operations, tracing moves, and understanding system message flow.
+- [Scries](https://docs.urbit.org/urbit-os/kernel/arvo/scry.md): Arvo scry guide - read-only requests to the global namespace, endpoint mechanics, and data retrieval patterns.
+- [Subscriptions](https://docs.urbit.org/urbit-os/kernel/arvo/subscriptions.md): Arvo subscriptions guide - reactive data flow, subscription types, Clay/Gall/Jael subscriptions, and stream mechanics.
+- [Ames](https://docs.urbit.org/urbit-os/kernel/ames.md): Technical documentation for Ames, Urbit's encrypted peer-to-peer networking protocol and the Arvo vane that implements it. Includes packet format, flows, congestion control, and cryptography.
+- [Ames API Reference](https://docs.urbit.org/urbit-os/kernel/ames/tasks.md): Ames API reference - networking tasks for messaging, packet handling, remote scries, and ship communication.
+- [Ames Cryptography](https://docs.urbit.org/urbit-os/kernel/ames/cryptography.md): Ames cryptography reference - AES encryption, Curve25519 key exchange, packet signing, and comet self-attestation.
+- [Ames Data Types](https://docs.urbit.org/urbit-os/kernel/ames/data-types.md): Ames data type reference - networking structures for packets, lanes, ships, addresses, and message flow state.
+- [Ames Scry Reference](https://docs.urbit.org/urbit-os/kernel/ames/scry.md): Ames scry reference - network queries for peers, routes, message flows, bones, and ship connectivity information.
+- [Behn](https://docs.urbit.org/urbit-os/kernel/behn.md): Documentation for Behn, Arvo's timer module for scheduling and managing timers.
+- [Behn API Reference](https://docs.urbit.org/urbit-os/kernel/behn/tasks.md): Behn API reference - timer tasks for setting and cancelling timers, scheduling events, and time management.
+- [Behn Examples](https://docs.urbit.org/urbit-os/kernel/behn/examples.md): Behn timer examples - setting timers with wait tasks, handling wake gifts, and timing operations.
+- [Behn Scry Reference](https://docs.urbit.org/urbit-os/kernel/behn/scry.md): Behn scry reference - timer queries for debugging timers, next timer, and scheduled timer information.
+- [Clay](https://docs.urbit.org/urbit-os/kernel/clay.md): Documentation for Clay, Arvo's version-controlled, referentially-transparent, and global filesystem, including architecture, data types, marks, and usage patterns.
+- [Clay API Reference](https://docs.urbit.org/urbit-os/kernel/clay/tasks.md): Clay API reference - filesystem tasks for reading, writing, tracking changes, and managing desks.
+- [Clay Architecture](https://docs.urbit.org/urbit-os/kernel/clay/architecture.md): Clay filesystem architecture - distributed revision control, typed data, persistence, and versioned filesystem design.
+- [Clay Data Types](https://docs.urbit.org/urbit-os/kernel/clay/data-types.md): Clay data type reference - filesystem structures for files, desks, revisions, merges, and version control.
+- [Clay Examples](https://docs.urbit.org/urbit-os/kernel/clay/examples.md): Clay filesystem examples - reading files, tracking changes, managing desks, merging, and filesystem operations.
+- [Clay Scry Reference](https://docs.urbit.org/urbit-os/kernel/clay/scry.md): Clay scry reference - filesystem queries by care for reading files, directories, hashes, and metadata.
+- [Filesystem Hierarchy](https://docs.urbit.org/urbit-os/kernel/clay/filesystem.md): Clay filesystem hierarchy - desk organization, folder structure, app/gen/lib/sur/sys directories and conventions.
+- [Marks](https://docs.urbit.org/urbit-os/kernel/clay/marks.md): Guide to using marks, Clay's conversion functions.
+- [Mark Examples](https://docs.urbit.org/urbit-os/kernel/clay/marks/examples.md): Clay mark examples - CSV mark implementation with parsing, validation, and conversion code samples.
+- [Using Marks](https://docs.urbit.org/urbit-os/kernel/clay/marks/using-marks.md): Clay marks usage - using mark cores and conversion gates for data transformation and type-safe operations.
+- [Writing Marks](https://docs.urbit.org/urbit-os/kernel/clay/marks/writing-marks.md): Clay marks guide - writing mark files for data type conversion, validation, parsing, and format handling.
+- [Using Clay](https://docs.urbit.org/urbit-os/kernel/clay/using.md): Clay usage guide - reading, subscribing, Unix sync, merge strategies, and filesystem best practices.
+- [Dill](https://docs.urbit.org/urbit-os/kernel/dill.md): Guide to Dill, Arvo's terminal driver vane.
+- [Dill API Reference](https://docs.urbit.org/urbit-os/kernel/dill/tasks.md): Dill API reference - terminal tasks for session management, input/output, and system printing.
+- [Dill Data Types](https://docs.urbit.org/urbit-os/kernel/dill/data-types.md): Dill data type reference - terminal structures for dimensions, sessions, input, and output handling.
+- [Dill Scry Reference](https://docs.urbit.org/urbit-os/kernel/dill/scry.md): Dill scry reference - terminal queries for sessions and system state information.
+- [Eyre](https://docs.urbit.org/urbit-os/kernel/eyre.md): Guide to Eyre, Arvo's HTTP server vane.
+- [EAuth](https://docs.urbit.org/urbit-os/kernel/eyre/eauth.md): Eyre authentication guide - web login, session management, cookies, and secure authentication mechanisms.
+- [Eyre Data Types](https://docs.urbit.org/urbit-os/kernel/eyre/data-types.md): Eyre data type reference - web server structures for HTTP requests, responses, sessions, and server state.
+- [Eyre External API](https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref.md): Eyre external API reference - HTTP endpoints, channel communication, authentication, and web interface integration.
+- [Eyre Internal API](https://docs.urbit.org/urbit-os/kernel/eyre/tasks.md): Eyre API reference - web server tasks for HTTP handling, binding URLs, serving content, and session management.
+- [Eyre Scry Reference](https://docs.urbit.org/urbit-os/kernel/eyre/scry.md): Eyre scry reference - web server queries for connections, bindings, authentication, and HTTP server state.
+- [Low-Level Eyre Guide](https://docs.urbit.org/urbit-os/kernel/eyre/guide.md): Eyre web server guide - HTTP request handling, URL binding, authentication, channels, and web application development.
+- [Noun channels](https://docs.urbit.org/urbit-os/kernel/eyre/noun-channels.md): Eyre noun channels guide - direct noun communication over HTTP for efficient data exchange with applications.
+- [Gall](https://docs.urbit.org/urbit-os/kernel/gall.md): Documentation for Gall, Arvo's application framework for Urbit userspace apps.
+- [Gall API Reference](https://docs.urbit.org/urbit-os/kernel/gall/gall-api.md): Gall API reference - agent notes and cards for communication, requests, arvo tasks, and inter-agent messaging.
+- [Gall Data Types](https://docs.urbit.org/urbit-os/kernel/gall/data-types.md): Gall data type reference - agent structures for subscriptions, bowls, cards, signs, and agent lifecycle management.
+- [Gall Scry Reference](https://docs.urbit.org/urbit-os/kernel/gall/scry.md): Gall scry reference - agent queries and vane-level endpoints for agent state, subscriptions, and metadata.
+- [Iris](https://docs.urbit.org/urbit-os/kernel/iris.md): Documentation for Iris, Arvo's HTTP client module for making HTTP requests.
+- [Iris API Reference](https://docs.urbit.org/urbit-os/kernel/iris/tasks.md): Iris API reference - HTTP client tasks for making requests, canceling requests, and receiving HTTP responses.
+- [Iris Data Types](https://docs.urbit.org/urbit-os/kernel/iris/data-types.md): Iris data type reference - HTTP client structures for responses, MIME data, and outbound request configuration.
+- [Iris Example](https://docs.urbit.org/urbit-os/kernel/iris/example.md): Iris HTTP client example - fetching remote resources with GET requests, handling responses, and processing HTTP data.
+- [Jael](https://docs.urbit.org/urbit-os/kernel/jael.md): Guide to Jael, Arvo's vane for networking key infrastructure.
+- [Jael API Reference](https://docs.urbit.org/urbit-os/kernel/jael/tasks.md): Jael API reference - PKI tasks and gifts for key management, subscriptions, domains, and ship identity operations.
+- [Jael Data Types](https://docs.urbit.org/urbit-os/kernel/jael/data-types.md): Jael data type reference - PKI structures for keys, points, diffs, blocks, seeds, and Azimuth ship identity data.
+- [Jael Examples](https://docs.urbit.org/urbit-os/kernel/jael/examples.md): Practical examples of Jael PKI tasks - subscribing to key updates, managing domains, web login codes, and key subscriptions.
+- [Jael Scry Reference](https://docs.urbit.org/urbit-os/kernel/jael/scry.md): Jael scry reference - PKI queries for keys, lifes, rifts, domains, subscriptions, and ship identity information.
+- [Khan](https://docs.urbit.org/urbit-os/kernel/khan.md): Guide to Khan, Arvo's thread-runner vane.
+- [Khan API Reference](https://docs.urbit.org/urbit-os/kernel/khan/tasks.md): Khan API reference - thread runner tasks for executing threads, handling results, and thread lifecycle management.
+- [Khan Data Types](https://docs.urbit.org/urbit-os/kernel/khan/types.md): Khan data type reference - thread runner structures for results, errors, and thread execution state.
+- [Khan Example](https://docs.urbit.org/urbit-os/kernel/khan/example.md): Khan thread runner example - running threads from Gall agents with success/failure handling and result processing.
+- [Lick](https://docs.urbit.org/urbit-os/kernel/lick.md): Guide to Lick, Arvo's IPC vane.
+- [Lick API Reference](https://docs.urbit.org/urbit-os/kernel/lick/tasks.md): Lick API reference - IPC tasks for socket creation, data transmission, and inter-process communication.
+- [Lick Guide](https://docs.urbit.org/urbit-os/kernel/lick/guide.md): Lick IPC guide - building applications that communicate with external programs through Unix sockets.
+- [Lick Examples](https://docs.urbit.org/urbit-os/kernel/lick/examples.md): Lick IPC examples - inter-process communication with external programs, socket management, and data exchange.
+- [Lick Scry Reference](https://docs.urbit.org/urbit-os/kernel/lick/scry.md): Lick scry reference - IPC queries for debugging socket connections and port status.
+- [Why Hoon?](https://docs.urbit.org/hoon/why-hoon.md): Rationale for Hoon programming language design.
+- [Advanced Types](https://docs.urbit.org/hoon/advanced.md): Advanced Hoon type system concepts including polymorphism, variance, wet and dry arms, core nesting rules, and advanced features like aliasing and bridges for complex programming scenarios.
+- [Arvo](https://docs.urbit.org/hoon/arvo.md): Arvo types and functions reference including fundamental types like $arch, $beak, $beam, $cage, $duct, $move, $ship, and utilities for Clay nodes, global paths, event processing, and namespace.
+- [Auras](https://docs.urbit.org/hoon/auras.md): Hoon aura system reference covering soft type annotation for atoms including text, numbers, dates, addresses, and their nesting behavior, bitwidth specifications, and literal syntax examples.
+- [Basic Types](https://docs.urbit.org/hoon/basic.md): Hoon type system fundamentals covering the recursive type data structure including atoms, cells, cores, faces, forks, and auras with explanations of type inference and nest checking.
+- [Cheat Sheet](https://docs.urbit.org/hoon/cheat-sheet.md): Quick reference guide to Hoon programming language syntax, operators, and functions available as a downloadable PDF for developers learning Urbit development.
+- [Cryptography](https://docs.urbit.org/hoon/cryptography.md): Cryptography functions reference for Hoon including Suite B cryptography implementation with AES encryption, elliptic curve digital signatures, Diffie-Hellman key exchange, and Ames security.
+- [Examples](https://docs.urbit.org/hoon/examples.md): Programming exercise solutions in Hoon covering algorithms like spell checking with blocks, competitive programming challenges, prime number calculations, path finding, and encryption implementations.
+- [ABC Blocks](https://docs.urbit.org/hoon/examples/abc-blocks.md): Programming challenge solution for spelling words with letter blocks in Hoon including input validation, alphabet checking, and backtracking algorithm implementation with unit tests.
+- [Competitive Programming](https://docs.urbit.org/hoon/examples/competitive.md): Programming implementations in Hoon for common algorithmic tasks including sorting, bitwise operations, prime calculation, functional operators, floating-point math, and debugging techniques.
+- [Emirp](https://docs.urbit.org/hoon/examples/emirp.md): Programming challenge for calculating emirp numbers (primes whose reverses are also primes) in Hoon with efficient prime checking algorithms and multiple solution implementations including unit tests.
+- [Gleichniszahlenreihe](https://docs.urbit.org/hoon/examples/gleichniszahlenreihe.md): Challenge to implement the look-and-say sequence (Gleichniszahlenreihe) in Hoon with sample solutions.
+- [Islands](https://docs.urbit.org/hoon/examples/islands.md): Challenge to find the largest connected island in a 2D grid using graph traversal algorithms.
+- [Luhn Number](https://docs.urbit.org/hoon/examples/luhn-number.md): Challenge to implement the Luhn algorithm for credit card number validation in Hoon.
+- [Minimum Path Sum](https://docs.urbit.org/hoon/examples/min-path.md): Challenge to find the minimum cost path through a 2D grid using dynamic programming.
+- [Phone Letters](https://docs.urbit.org/hoon/examples/phone-letters.md): Challenge to generate all possible letter combinations from phone keypad number sequences.
+- [Restore IP](https://docs.urbit.org/hoon/examples/restore-ip.md): Challenge to restore valid IPv4 addresses from strings of digits by inserting dots.
+- [Rhonda Numbers](https://docs.urbit.org/hoon/examples/rhonda.md): Challenge to find and validate Rhonda numbers based on prime factorization and base conversion.
+- [Roman Numerals](https://docs.urbit.org/hoon/examples/roman.md): Challenge to implement conversion between Roman numerals and decimal numbers in Hoon.
+- [Solitaire Cipher](https://docs.urbit.org/hoon/examples/solitaire.md): Challenge to implement the Solitaire cryptographic cipher algorithm using playing cards as keys.
+- [Water Towers](https://docs.urbit.org/hoon/examples/water-towers.md): Challenge to calculate water trapped between tower heights using dynamic programming.
+- [Generators](https://docs.urbit.org/hoon/generators.md): Guide to building and using Hoon generator scripts for Dojo interaction, including bare generators for standalone calculations, %say generators with system knowledge access, and %ask generators.
+- [Hoon Errors](https://docs.urbit.org/hoon/hoon-errors.md): Guide to debugging Hoon code, covering common syntax and semantic errors, error traces, debugging modes, and stack trace interpretation.
+- [Hoon Style Guide](https://docs.urbit.org/hoon/style.md): Official Hoon style guide covering layout conventions, naming standards, commenting practices, and code quality.
+- [Implementing an Aura](https://docs.urbit.org/hoon/aura-guide.md): Step-by-step guide to creating custom auras in Hoon, covering aura design, base logic, pretty-printing, and parsing rules with a sexagesimal degrees example.
+- [Irregular forms](https://docs.urbit.org/hoon/irregular.md): Reference guide to Hoon's irregular syntax forms, showing both the irregular and regular forms for common patterns with quick lookup table and detailed explanations.
+- [JSON](https://docs.urbit.org/hoon/json-guide.md): Guide to working with JSON in Hoon, covering conversion between Hoon data structures and JSON using +enjs and +dejs functions, with practical examples and mark file creation.
+- [Lagoon (Linear Algebra)](https://docs.urbit.org/hoon/lagoon.md): Documentation for the %base desk's /lib/lagoon.hoon library, which contains linear algebra operations.
+- [Convenience functions](https://docs.urbit.org/hoon/lagoon/conv.md)
+- [Builders](https://docs.urbit.org/hoon/lagoon/build.md)
+- [Structures](https://docs.urbit.org/hoon/lagoon/structure.md)
+- [Arithmetic](https://docs.urbit.org/hoon/lagoon/math.md)
+- [Limbs and wings](https://docs.urbit.org/hoon/limbs.md): Introduction to limbs and wings in Hoon, which provide the primary mechanism for accessing data from the subject without traditional scope or environment concepts.
+- [Limbs](https://docs.urbit.org/hoon/limbs/limb.md): Reference for limbs in Hoon, which are attributes of the subject used to resolve to pieces of data (legs) or computations (arms) within the subject tree.
+- [Wings](https://docs.urbit.org/hoon/limbs/wing.md): Reference for wings in Hoon, which are lists of limbs forming search paths into the subject to access nested data and computations.
+- [Mathematics](https://docs.urbit.org/hoon/math.md): Documentation for the %base desk's /lib/math.hoon library, which contains mathematical operations.
+- [Mips (Maps of Maps)](https://docs.urbit.org/hoon/mip.md): Reference for working with mips (maps of maps) in Hoon using the mip library, covering mip operations like insertion, deletion, and retrieval.
+- [Parsing Text](https://docs.urbit.org/hoon/parsing.md): Guide to parsing text in Hoon using functional parsers and combinators, covering basic types like hair/nail/edge/rule and common parsing patterns.
+- [Runes](https://docs.urbit.org/hoon/rune.md): Reference documentation for Hoon's rune expressions organized by family.
+- [| bar · Cores](https://docs.urbit.org/hoon/rune/bar.md): Reference for the core rune family, including gates, doors, traps, and wet cores with detailed syntax and examples for each variant.
+- [$ buc · Structures](https://docs.urbit.org/hoon/rune/buc.md): Reference for Hoon's structure runes, including mold creation, validation, and type construction.
+- [% cen · Calls](https://docs.urbit.org/hoon/rune/cen.md): Reference for the function call rune family, evaluating arms in cores and doors with various calling patterns and argument arrangements.
+- [: col · Cells](https://docs.urbit.org/hoon/rune/col.md): Reference for Hoon's cell constructor runes, with various forms including irregular syntax for common patterns.
+- [. dot · Nock](https://docs.urbit.org/hoon/rune/dot.md): Reference for Hoon's Nock runes, including scrying with .^ and basic Nock operations like increment.
+- [/ fas · Imports](https://docs.urbit.org/hoon/rune/fas.md): Reference for build system runes, used to import files from /sur and /lib directories among other locations.
+- [^ ket · Casts](https://docs.urbit.org/hoon/rune/ket.md): Reference for Hoon's type-casting rune family, which allows safe type transformations without violating constraints.
+- [+ lus · Arms](https://docs.urbit.org/hoon/rune/lus.md): Reference for the arm rune family used to define functions and other named expressions in cores, including normal computations, structure definitions, and constructors.
+- [; mic · Make](https://docs.urbit.org/hoon/rune/mic.md): Reference for the make rune family used for miscellaneous useful macros, including n-ary function calls and monadic notation.
+- [~ sig · Hints](https://docs.urbit.org/hoon/rune/sig.md): Reference for the hint runes used to pass non-semantic information to the interpreter using Nock 11, including debugging and tracing.
+- [= tis · Subject](https://docs.urbit.org/hoon/rune/tis.md): Reference for Hoon's subject modification runes.
+- [? wut · Conditionals](https://docs.urbit.org/hoon/rune/wut.md): Reference for the conditional runes used for logical operations, including branching, type testing, and boolean logic with type inference.
+- [! zap · Wild](https://docs.urbit.org/hoon/rune/zap.md): Reference for the wild runes used for special operations, including AST introspection and vase creation for dynamic types.
+- [Constants (Atoms and Strings)](https://docs.urbit.org/hoon/rune/constants.md): Reference for constant expressions in Hoon, including cold atoms, strings with interpolation, and path syntax with examples.
+- [--, == · Terminators](https://docs.urbit.org/hoon/rune/terminators.md): Reference for Hoon terminators -- and == used to end core expressions and other variable-length expression sequences respectively.
+- [Sail (HTML)](https://docs.urbit.org/hoon/sail.md): Guide to Sail, Urbit's domain-specific language for composing HTML and XML structures directly in Hoon, with syntax and examples for creating web interfaces.
+- [Serialization](https://docs.urbit.org/hoon/serialization.md): Guide to noun serialization in Hoon using jamming and cuing techniques for converting nouns to atoms and back, with compression through internal references.
+- [Sets](https://docs.urbit.org/hoon/sets.md): Guide to working with sets in Hoon. Set creation, membership testing, and set operations like union, intersection, and difference.
+- [Standard Library](https://docs.urbit.org/hoon/stdlib.md): Reference documentation for the Hoon standard library, organized by layer from basic arithmetic to advanced compiler operations and text processing.
+- [1a: Basic Arithmetic](https://docs.urbit.org/hoon/stdlib/1a.md): Reference for basic arithmetic functions in Hoon including addition, subtraction, multiplication, division, and comparison operations for unsigned integers.
+- [1b: Tree Addressing](https://docs.urbit.org/hoon/stdlib/1b.md): Reference for tree addressing functions in Hoon using Nock's tree addressing scheme to navigate and manipulate tree structures.
+- [1c: Molds and Mold-Builders](https://docs.urbit.org/hoon/stdlib/1c.md): Reference for fundamental container types and molds in Hoon including pair, list, unit, tree, gate, and other essential type definitions.
+- [2a: Unit Logic](https://docs.urbit.org/hoon/stdlib/2a.md): Reference for unit logic functions in Hoon, providing operations for working with optional values including binding, replacing null, and unit transformations.
+- [2b: List Logic](https://docs.urbit.org/hoon/stdlib/2b.md): Reference for \`+list\` manipulation functions in Hoon including searching, sorting, filtering, and transforming operations on \`+list\` data structures.
+- [2c: Bit Arithmetic](https://docs.urbit.org/hoon/stdlib/2c.md): Reference for bit arithmetic functions in Hoon used for assembling, disassembling, and manipulating atoms at the bit level using block-based operations.
+- [2d: Bit Logic](https://docs.urbit.org/hoon/stdlib/2d.md): Reference for bit logic functions in Hoon providing bitwise logical operations including binary AND, OR, XOR, and other bit manipulation functions.
+- [2e: Insecure Hashing](https://docs.urbit.org/hoon/stdlib/2e.md): Reference for non-cryptographic hash functions in Hoon including MurmurHash3 and other fast hashing algorithms for data structures and scrambling.
+- [2f: Noun Ordering](https://docs.urbit.org/hoon/stdlib/2f.md): Reference for noun ordering functions in Hoon used for comparing and sorting nouns with different ordering schemes including alphabetical and depth order.
+- [2g: Unsigned Powers](https://docs.urbit.org/hoon/stdlib/2g.md): Exponentiation and power-related operations for unsigned integers.
+- [2h: Set Logic](https://docs.urbit.org/hoon/stdlib/2h.md): Set data structure operations including union, intersection, difference, and membership testing.
+- [2i: Map Logic](https://docs.urbit.org/hoon/stdlib/2i.md): Functions for working with key-value \`+map\`s, including insertion, deletion, lookup, and \`+map\` transformations.
+- [2j: Jar and Jug Logic](https://docs.urbit.org/hoon/stdlib/2j.md): Operations for \`+jar\` (map of lists) and jug (map of sets) data structures.
+- [2k: Queue Logic](https://docs.urbit.org/hoon/stdlib/2k.md): Queue data structure operations for first-in, first-out data handling.
+- [2l: Container from Container](https://docs.urbit.org/hoon/stdlib/2l.md): Functions for converting between container types like lists, maps, and sets.
+- [2m: Container from Noun](https://docs.urbit.org/hoon/stdlib/2m.md): Functions for creating typed containers (lists, maps, sets) from raw nouns.
+- [2n: Functional Hacks](https://docs.urbit.org/hoon/stdlib/2n.md): Functional programming utilities including composition, currying, and common higher-order functions.
+- [2o: Normalizing Containers](https://docs.urbit.org/hoon/stdlib/2o.md): Mold generators for common container types including maps, sets, queues, jars, and jugs.
+- [2p: Serialization](https://docs.urbit.org/hoon/stdlib/2p.md): Serialization functions for packing and unpacking \`$noun\`s to and from atoms.
+- [2q: Molds and Mold-Builders](https://docs.urbit.org/hoon/stdlib/2q.md): Core molds and mold builders for basic types like paths, dates, tanks, and strings.
+- [3a: Modular and Signed Ints](https://docs.urbit.org/hoon/stdlib/3a.md): Signed integer arithmetic and modular arithmetic operations.
+- [3b: Floating Point](https://docs.urbit.org/hoon/stdlib/3b.md): Floating-point arithmetic operations for binary and decimal floating-point numbers.
+- [3c: Urbit Time](https://docs.urbit.org/hoon/stdlib/3c.md): Time and date manipulation functions for Urbit's datetime format.
+- [3d: SHA Hash Family](https://docs.urbit.org/hoon/stdlib/3d.md): SHA cryptographic hash functions including SHA-1, SHA-256, and SHA-512.
+- [3e: AES encryption (Removed)](https://docs.urbit.org/hoon/stdlib/3e.md): Deprecated section for AES encryption functions that have been removed from the standard library.
+- [3f: Scrambling](https://docs.urbit.org/hoon/stdlib/3f.md): Reversible scrambling operations used in Urbit's phonetic base encoding systems (@p and @q).
+- [3g: Molds and Mold-Builders](https://docs.urbit.org/hoon/stdlib/3g.md): Molds for syntax parsing including coin literals, dimes, and format specifiers.
+- [4a: Exotic Bases](https://docs.urbit.org/hoon/stdlib/4a.md): Phonetic base encoding functions for Urbit's naming system and ship identities.
+- [4b: Text Processing](https://docs.urbit.org/hoon/stdlib/4b.md): Text processing functions for printing, formatting, and converting between text types.
+- [4c: Tank Printer](https://docs.urbit.org/hoon/stdlib/4c.md): Tank printing and rendering functions for formatting structured output text.
+- [4d: Parsing (Tracing)](https://docs.urbit.org/hoon/stdlib/4d.md): Parsing utilities for tracking line and column positions during text parsing.
+- [4e: Parsing (Combinators)](https://docs.urbit.org/hoon/stdlib/4e.md): Parser combinators for composing and combining parsing rules.
+- [4f: Parsing (Rule-Builders)](https://docs.urbit.org/hoon/stdlib/4f.md): Parser rule builders for constructing parsing rules and modifying parser behavior.
+- [4g: Parsing (Outside Caller)](https://docs.urbit.org/hoon/stdlib/4g.md): Top-level parsing functions for parsing text from external sources.
+- [4h: Parsing (ASCII Glyphs)](https://docs.urbit.org/hoon/stdlib/4h.md): Parsers for individual ASCII characters and punctuation marks.
+- [4i: Parsing (Useful Idioms)](https://docs.urbit.org/hoon/stdlib/4i.md): Common parsing patterns for alphabetic, numeric, and whitespace characters.
+- [4j: Parsing (Bases and Base Digits)](https://docs.urbit.org/hoon/stdlib/4j.md): Parsers for numeric literals in various bases including binary, hex, and decimal.
+- [4k: Atom Printing](https://docs.urbit.org/hoon/stdlib/4k.md): Functions for rendering atoms and coins as human-readable text output.
+- [4l: Atom Parsing](https://docs.urbit.org/hoon/stdlib/4l.md): Functions for parsing atoms from text strings in various formats and bases.
+- [4m: Formatting Functions](https://docs.urbit.org/hoon/stdlib/4m.md): Functions for formatting and rendering dimes, atoms, and other data types as text.
+- [4n: Virtualization](https://docs.urbit.org/hoon/stdlib/4n.md): Nock virtualization functions for safe execution and computation wrapping.
+- [4o: Molds](https://docs.urbit.org/hoon/stdlib/4o.md): Advanced molds for Hoon's type system including type definitions and abstract syntax tree structures.
+- [5a: Compiler Utilities](https://docs.urbit.org/hoon/stdlib/5a.md): Internal compiler utilities and functions used by the Hoon compiler backend.
+- [5b: Macro Expansion](https://docs.urbit.org/hoon/stdlib/5b.md): Internal macro expansion utilities used by the Hoon compiler for syntax transformations.
+- [5c: Compiler Backend & Prettyprinter](https://docs.urbit.org/hoon/stdlib/5c.md): Hoon compiler backend and pretty-printing functions for code formatting and output.
+- [5d: Parser](https://docs.urbit.org/hoon/stdlib/5d.md): Hoon language parser with core parsing functions and rules for syntax analysis.
+- [5e: Molds and mold builders](https://docs.urbit.org/hoon/stdlib/5e.md): XML and markup-related molds for handling structured document formats.
+- [5f: Profiling support](https://docs.urbit.org/hoon/stdlib/5f.md): Profiling and performance monitoring utilities for code analysis and optimization.
+- [Strings](https://docs.urbit.org/hoon/strings.md): Guide to Hoon's string types including cords, tapes, and text manipulation functions.
+- [The Engine Pattern](https://docs.urbit.org/hoon/engine-pattern.md): Guide to the engine pattern in Hoon for managing nested cores and state with +abet.
+- [Udon (Markdown-esque)](https://docs.urbit.org/hoon/udon.md): Udon markup language for document composition, similar to Markdown with Urbit-related affordances.
+- [Vases](https://docs.urbit.org/hoon/vases.md): Guide to vases, pairs of type and data used for runtime type information in Urbit.
+- [Zuse](https://docs.urbit.org/hoon/zuse.md): Documentation for the %base desk's /sys/zuse.hoon library, which contains helper functions for the kernel.
+- [2d(1-5): To JSON, Wains](https://docs.urbit.org/hoon/zuse/2d_1-5.md): Text formatting functions. Convert cords to wains (line lists), JSON encoding functions, format library utilities.
+- [2d(6): From JSON](https://docs.urbit.org/hoon/zuse/2d_6.md): JSON decoding functions that crash on failure. Fast JSON parsing without unit wrapping. dejs format library.
+- [2d(7): From JSON (unit)](https://docs.urbit.org/hoon/zuse/2d_7.md): JSON decoding functions that return units. Safe JSON parsing with error handling. dejs-soft format library.
+- [2e(2-3): Print & Parse JSON](https://docs.urbit.org/hoon/zuse/2e_2-3.md): JSON encoding and decoding functions. Print JSON to cord, parse JSON from cord. Part of format library.
+- [2m: Ordered Maps](https://docs.urbit.org/hoon/zuse/2m.md): Ordered maps (mop) data structure and operations. Maps with custom ordering functions, not hash-ordered.
+- [What is Nock?](https://docs.urbit.org/nock/what-is-nock.md): Introduction to Nock, Urbit's minimal assembly language and computation standard that underlies all of Urbit OS and Hoon compilation.
+- [Decrement](https://docs.urbit.org/nock/decrement.md): Exercise in implementing decrement in Nock as a practice for understanding the language.
+- [Definition](https://docs.urbit.org/nock/definition.md): Formal definition of Nock with reduction rules and combinator specifications.
+- [Fast Hints and Jets](https://docs.urbit.org/nock/jetting.md): Runtime jetting system that accelerates Nock computation through fast hints. Cold state, hot state, warm state.
+- [Implementations](https://docs.urbit.org/nock/implementations.md): Collection of Nock interpreter implementations in various programming languages.
+- [Specification](https://docs.urbit.org/nock/specification.md): Complete Nock specification explaining the data model, reductions, and operational semantics.
+- [Contents](https://docs.urbit.org/user-manual/contents.md): User manual for self-hosting an Urbit server. Guides for managing Urbit ID, running Urbit OS, and operating your personal Urbit server.
+- [Running Urbit](https://docs.urbit.org/user-manual/running.md): Guide to running Urbit in different contexts including cloud hosting and home servers.
+- [Cloud Hosting](https://docs.urbit.org/user-manual/running/cloud-hosting.md): Step-by-step guide to deploying Urbit on Digital Ocean cloud servers for remote access.
+- [Home Servers](https://docs.urbit.org/user-manual/running/home-servers.md): Guide to running Urbit on home server hardware using tools like Native Planet and Umbrel.
+- [Runtime Reference](https://docs.urbit.org/user-manual/running/vere.md): Guide to Vere, the Urbit runtime and Nock interpreter, for self-hosted users.
+- [Self-hosting S3 Storage with MinIO](https://docs.urbit.org/user-manual/running/minio.md): Guide to self-hosting MinIO S3-compatible storage for Urbit media uploads and avatars.
+- [Urbit ID](https://docs.urbit.org/user-manual/id.md): This section covers managing your Urbit ID with Bridge, and some other practical information about using Urbit ID.
+- [Bridge Troubleshooting](https://docs.urbit.org/user-manual/id/bridge-troubleshooting.md): Troubleshooting guide for common issues with the Bridge web application for Urbit ID management.
+- [Creating an Invite Pool](https://docs.urbit.org/user-manual/id/creating-an-invite-pool.md): Guide for Urbit star owners to create invite pools for distributing planet invites to friends.
+- [Get an Urbit ID](https://docs.urbit.org/user-manual/id/get-id.md): How users can acquire an Urbit ID.
+- [Guide to Factory Resets](https://docs.urbit.org/user-manual/id/guide-to-resets.md): Guide to performing factory resets and understanding network continuity in Urbit.
+- [HD Wallet (Master Ticket)](https://docs.urbit.org/user-manual/id/hd-wallet.md): Guide to Urbit HD wallets and master tickets for managing Urbit ID keys and ownership.
+- [Layer 2 for planets](https://docs.urbit.org/user-manual/id/layer-2-for-planets.md): How planet users can use Azimuth's Layer 2 rollup solution.
+- [Layer 2 for stars](https://docs.urbit.org/user-manual/id/l2-star.md): How star owners can use Azimuth's Layer 2 rollup.
+- [Proxies](https://docs.urbit.org/user-manual/id/proxies.md): Overview of Azimuth's Proxies system for users.
+- [Using Bridge](https://docs.urbit.org/user-manual/id/using-bridge.md): Guide to using Bridge for managing Urbit ID, generating keyfiles, and setting networking keys.
+- [Urbit OS](https://docs.urbit.org/user-manual/os.md): User manual for operating and interacting with Urbit OS including filesystem and command line.
+- [Basics](https://docs.urbit.org/user-manual/os/basics.md): Basic instructions on how to set up an run an Urbit server for self-hosted users.
+- [Configuring S3 Storage](https://docs.urbit.org/user-manual/os/s3.md): Guide to setting up S3 cloud storage integration for file uploads and media sharing in Urbit.
+- [Dojo Tools](https://docs.urbit.org/user-manual/os/dojo-tools.md): Complete refernce for the Dojo, Urbit's CLI. Includes common actions self-hosted users will need to run their Urbit server.
+- [Filesystem](https://docs.urbit.org/user-manual/os/filesystem.md): Guide to Clay, Arvo's revision-controlled filesystem vane, for self-hosted users.
+- [Shell](https://docs.urbit.org/user-manual/os/shell.md): Guide to using the Dojo shell for command-line interaction and Hoon expression evaluation.
+- [Ship Troubleshooting](https://docs.urbit.org/user-manual/os/ship-troubleshooting.md): Troubleshooting guide for resolving common Urbit ship connectivity and operational issues.
+- [Star and Galaxy Operations](https://docs.urbit.org/user-manual/os/stars-and-galaxies.md): Guide for operating stars and galaxies including hosting, planet distribution, and etiquette.
+- [Updates](https://docs.urbit.org/user-manual/os/updates.md): Guide to managing Urbit OS updates including Vere runtime, Arvo kernel, and application updates.
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.urbit.org/readme.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

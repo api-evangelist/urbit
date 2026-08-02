@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: derived
+source: docs.urbit.org Eyre external API reference + well-known/ probes
+description: >-
+  Standards conformance assertions for the Urbit platform's public surfaces,
+  derived from the published documentation and live probes. Urbit is
+  deliberately non-REST: the ship API is a cookie-authenticated channel/SSE
+  protocol plus scries, not OAuth/OIDC/JSON:API. The Layer 2 roller exposes
+  an HTTP RPC-API (JSON-RPC style) at roller.urbit.org for Bridge.
+standards:
+  - id: sse-server-sent-events
+    conforms: true
+    evidence: Eyre channels deliver responses as WHATWG Server-Sent Events (external-api-ref links the SSE spec).
+  - id: json-rpc
+    conforms: true
+    evidence: >-
+      Azimuth L2 roller exposes an HTTP RPC-API (documented at
+      docs.urbit.org/urbit-id/l2/layer2-api, JSON-RPC call diagram) served
+      publicly at https://roller.urbit.org/.
+  - id: llms-txt
+    conforms: true
+    evidence: Canonical /llms.txt published on urbit.org and docs.urbit.org, plus /.well-known/llms.txt mirror and agents.md conventions.
+  - id: erc-721
+    conforms: true
+    evidence: Layer 1 Urbit IDs are ERC-721 NFTs on Ethereum (Azimuth contracts; tradable on OpenSea per docs.urbit.org/get-on-urbit).
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth2 surface; Eyre uses per-ship session cookies obtained via POST /~/login.
+  - id: oidc
+    conforms: false
+    evidence: /.well-known/openid-configuration returns 404 on urbit.org; no OIDC documented.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors are HTTP status codes plus SSE err acknowledgements; no application/problem+json.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404 on urbit.org and docs.urbit.org (SPA shells elsewhere).
+  - id: json-api
+    conforms: false
+    evidence: Channel/scry protocol, not JSON:API resource documents.
+  - id: idempotency-key
+    conforms: false
+    evidence: No idempotency-key contract documented for Eyre.
