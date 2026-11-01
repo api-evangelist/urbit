@@ -64,6 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Urbit is a company surfaced as a portfolio company of pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+Urbit is an open-source personal server platform combining Urbit ID — a self-sovereign, Ethereum-anchored identity system (Azimuth) — with Urbit OS, a deterministic operating system built on the Nock virtual machine and the Hoon language. Every user runs their own ship, a self-hosted server whose Eyre HTTP vane exposes the platform's API surface: cookie-authenticated channels (JSON actions in, Server-Sent Events out), read-only scries, and threads, with first-party JavaScript clients published under the @urbit npm scope. The project is notably agent-native: urbit.org publishes a canonical llms.txt, machine-oriented markdown mirrors, public Agent Skills, and a documented MCP path for driving ships from LLM clients. Originally bootstrapped by Tlon and backed by investors including Pantera Capital, the network's identity layer trades as ERC-721 NFTs with a Layer 2 naive rollup (roller.urbit.org) that eliminates gas costs.
 
-Backed by: pantera-capital — https://urbit.org/
+**Areas:** Company · Cryptocurrency · Personal Servers · Decentralized Identity · Peer-to-Peer · Operating System · Self-Hosting · Agents
+
+## Urbit on APIs.io
+
+Everything profiled for Urbit is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/urbit/](https://apis.io/providers/urbit/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Urbit Ship HTTP API (Eyre)](https://apis.io/apis/urbit/urbit-ship-http-api-eyre/) — The HTTP interface of every Urbit ship, served by the Eyre kernel vane. Clients authenticate by POSTing the ship's web login code to /~/login for an urbauth…
+- [Azimuth Layer 2 Roller HTTP RPC-API](https://apis.io/apis/urbit/azimuth-layer-2-roller-http-rpc-api/) — The HTTP RPC-API of Azimuth's Layer 2 naive rollup roller, primarily intended for interacting with Bridge. Tlon operates the default public roller at…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [urbit-mcp](https://apis.io/servers/urbit/urbit-mcp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Urbit Authentication](https://apis.io/security/urbit/urbit-authentication/)
+- [Urbit Domain Security](https://apis.io/security/urbit/urbit-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://urbit.org/)
+- [Documentation](https://docs.urbit.org/)
+- [Getting started](https://docs.urbit.org/get-on-urbit)
+- [API reference](https://docs.urbit.org/urbit-os/kernel/eyre/external-api-ref)
+- [Support](https://urbit.org/overview/running-urbit/support)
+- [Blog](https://urbit.org/blog)
+- [Terms of service](https://urbit.org/terms-of-service)
+- [Privacy policy](https://urbit.org/privacy)
+- [GitHub](https://github.com/urbit)
+
+## API Evangelist rating
+
+**Kin Score 32.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 85.7 |
+| Access clarity | 21.1 |
+
+**Agent readiness 12.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/urbit/](https://apis.io/providers/urbit/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Urbit: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/urbit/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
